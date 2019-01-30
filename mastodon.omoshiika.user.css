@@ -1,0 +1,45 @@
+/* ==UserStyle==
+@name           重しイカ
+@namespace      github.com/eai04191
+@version        1.0.3
+@description    Omoshi-ika
+@author         Eai
+@license        MIT
+@preprocessor   stylus
+@var            text    textColor  "Header Text Color. May be #e1e8ed or #292f33." #e1e8ed
+==/UserStyle== */
+@-moz-document url-prefix("https://mstdn.maud.io/web/") {
+    .column[aria-label="連合タイムライン"] {
+        .column-header > button > i:after {
+            content: "重しイカ";
+            margin-left: 5px;
+            color: textColor;
+        }
+
+        .column-header > button > i {
+            color: textColor;
+        }
+
+        .column-header > button {
+            color: transparent;
+        }
+
+        .item-list {
+            display: flex;
+            flex-wrap: wrap;
+            article {
+                width: 25%;
+                .media-gallery,
+                .status__action-bar,
+                .status__content,
+                .status__relative-time,
+                .display-name,
+                .status-card,
+                .status-card-video,
+                .video-player {
+                    display: none;
+                }
+            }
+        }
+    }
+}
