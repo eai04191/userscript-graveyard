@@ -79,7 +79,7 @@ YouTubeでシアターモードで再生中の動画の大きさを1920x1080に�
 
 pixivのユーザーのイラスト一覧の画面で、イラストの漫画ビューを直接開くボタンを追加する。
 
-### [github-relative-time.user.js](/userscript/github-relative-time.user.js)
+### [github.relativeTime.user.js](/userscript/github.relativeTime.user.js)
 
 ![SS](https://i.imgur.com/ok8frdf.png)
 
