@@ -1,0 +1,35 @@
+/* ==UserStyle==
+@name           twitter.com - Java Style Button
+@namespace      mizle.net
+@version        1.0.0
+@description    Be Java.
+@author         Eai <eai@mizle.net>
+@preprocessor   stylus
+==/UserStyle== */
+@-moz-document domain("twitter.com") {
+  .EdgeButton,
+  .EdgeButton:visited {
+    background-color: transparent;
+    background-image: var(--java-bg);
+    height: 35px;
+    background-size: 100% calc(35px * 2);
+    background-repeat: no-repeat;
+    border-radius: 0;
+    border: none;
+
+    &:hover {
+      background-position-y: bottom;
+      background-color: transparent;
+    }
+
+    > span {
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  }
+
+  :root {
+    --java-bg: url("data:image/png;base64,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");
+  }
+}

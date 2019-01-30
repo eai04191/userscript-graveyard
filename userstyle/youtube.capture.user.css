@@ -1,0 +1,43 @@
+/* ==UserStyle==
+@name           youtube.capture.user.css
+@namespace      mizle.net
+@version        1.0.0
+@author         Eai <eai@mizle.net>
+==/UserStyle== */
+@-moz-document url-prefix("https://www.youtube.com/watch?v=") {
+    video.html5-main-video {
+        width: 1920px !important;
+        height: 1080px !important;
+    }
+
+    .ytd-watch {
+        --flex1280-mode-player-width: 1920px !important;
+        --flex1280-mode-player-height: 1080px !important;
+    }
+
+    .ytp-chrome-controls {
+        transform-origin: 0 0 !important;
+    }
+
+    .caption-window,
+    .ytp-chrome-controls {
+        transform: scale(1.5) !important;
+    }
+
+    .caption-window {
+        margin-bottom: 0 !important;
+    }
+
+    .ytp-gradient-bottom,
+    .ytp-chrome-bottom {
+        display: none;
+    }
+
+    #movie_player:hover .ytp-chrome-bottom {
+        display: block;
+    }
+
+    #movie_player:hover .caption-window {
+        margin-bottom: 49px !important;
+    }
+}
