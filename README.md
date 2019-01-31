@@ -85,6 +85,14 @@ pixivのユーザーのイラスト一覧の画面で、イラストの漫画ビ
 
 GitHubの時間表記`on 30 Jul 2018`などを`2018/7/30 22:41`といった表記に変更する。
 
+### [picrew.mastodonIntegration.user.js](/userscript/picrew.mastodonIntegration.user.js)
+
+![SS](https://i.imgur.com/agpRoRC.png)
+
+picrewの完成画面で直接投稿できるボタンを追加する。
+
+使うには15,16行目のホストとトークンを書き換える。
+
 ### [](/userscript/)
 
 ## 🔖 bookmarklet
