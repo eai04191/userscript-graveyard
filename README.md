@@ -93,6 +93,12 @@ picrewの完成画面で直接投稿できるボタンを追加する。
 
 使うには15,16行目のホストとトークンを書き換える。
 
+### [bookmeter.hontoSearch.user.js](/userscript/bookmeter.hontoSearch.user.js)
+
+読書メーターで本の詳細ページに出てくる「書斎で詳細を見る」にhontoでの検索を追加する。
+
+`MutationObserver`を知らない頃に書いたので`waitForKeyelements.js`とか使ってるしもう何もかも終わり。
+
 ### [](/userscript/)
 
 ## 🔖 bookmarklet
