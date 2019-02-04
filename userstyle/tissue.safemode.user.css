@@ -1,0 +1,78 @@
+/* ==UserStyle==
+@name           shikorism.net あんしんモード
+@namespace      mizle.net
+@version        1.0.0
+@author         Eai
+@license        MIT
+@preprocessor   stylus
+
+@var            checkbox  hideImages          "画像を隠す" 1
+@var            checkbox  hideProfile         "プロフィールを隠す" 1
+@var            checkbox  hideTaglist         "タグリストを隠す" 1
+@var            checkbox  hideUsername        "ユーザー名を隠す" 1
+@var            checkbox  hideTags            "チェックインのタグを隠す" 1
+@var            checkbox  hideNotes           "チェックインのノートを隠す" 1
+@var            checkbox  hideExternalLinks   "外部リンクのURLを隠す" 1
+@var            checkbox  hideCards           "リンクカードを隠す" 1
+==/UserStyle== */
+@-moz-document domain("shikorism.net") {
+
+    if hideImages {
+        img {
+            filter: brightness(0);
+        }
+    }
+
+    if hideProfile {
+        .col-lg-4 {
+            .card .card-body .text-dark,
+            .card .card-body .text-muted {
+                color: transparent !important;
+                background: black;
+            }
+        }
+    }
+
+    if hideTaglist {
+        .col-lg-4 {
+            .card .list-group .list-group-item {
+                color: transparent !important;
+            }
+        }
+    }
+
+    if hideUsername {
+        a[href^="https://shikorism.net/user/"].text-dark {
+            color: transparent !important;
+        }
+    }
+
+    if hideTags {
+        a.badge {
+            color: transparent !important;
+        }
+    }
+
+    if hideNotes {
+        p.tis-word-wrap {
+            background: black;
+        }
+    }
+
+    if hideExternalLinks {
+        a.overflow-hidden[target="_blank"] {
+            color: transparent !important;
+            background: black;
+        }
+    }
+
+    if hideCards {
+        .card.link-card {
+            .card-title,
+            .card-text {
+                color: transparent !important;
+                background: black;
+            }
+        }
+    }
+}
