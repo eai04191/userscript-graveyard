@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           shikorism.net あんしんモード
 @namespace      mizle.net
-@version        1.0.0
+@version        1.0.
 @author         Eai
 @license        MIT
 @preprocessor   stylus
@@ -55,6 +55,7 @@
 
     if hideNotes {
         p.tis-word-wrap {
+            color: transparent !important;
             background: black;
         }
     }
