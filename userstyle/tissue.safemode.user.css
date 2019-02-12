@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           shikorism.net あんしんモード
 @namespace      mizle.net
-@version        1.0.1
+@version        1.0.2
 @author         Eai
 @license        MIT
 @preprocessor   stylus
@@ -35,7 +35,7 @@
 
     if hideTaglist {
         .col-lg-4 {
-            .card .list-group .list-group-item {
+            .card .list-group .list-group-item[href^='https://shikorism.net/search/checkin?q='] {
                 color: transparent !important;
             }
         }
