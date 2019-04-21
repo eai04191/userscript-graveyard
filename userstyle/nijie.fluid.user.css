@@ -1,0 +1,47 @@
+/* ==UserStyle==
+@name           nijie fluid
+@namespace      mizle.net
+@version        1.0.0
+@description    nijieの作品ページで画像をできるだけ大きく表示します
+@author         Eai <eai@mizle.net> (https://mizle.net)
+@license        MIT
+@preprocessor   stylus
+==/UserStyle== */
+@-moz-document url-prefix("https://nijie.info/view.php?id=") {
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    #main {
+        width: auto;
+        display: flex;
+        flex-flow: row wrap;
+
+        #main-center-none {
+            flex: 1;
+            width: auto;
+
+            #view_side_ad,
+            #view_side_dojin {
+                display: none;
+            }
+
+            #view-left {
+                padding-right: 0;
+            }
+
+            #gallery {
+                img,
+                video {
+                    max-width: 100%;
+                }
+            }
+
+            #view_mix_button * {
+                box-sizing: content-box;
+            }
+        }
+    }
+}
