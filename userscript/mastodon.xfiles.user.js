@@ -40,7 +40,7 @@ window.addEventListener(
                 if (mutation.addedNodes.length != 0) {
                     const text = mutation.addedNodes["0"].textContent;
                     if (text.includes("X-Files Theme")) {
-                        console.log("X-Files Theme Detected");
+                        console.log("X-Files Theme Detected", text);
                         this.beep();
                     }
                 }
