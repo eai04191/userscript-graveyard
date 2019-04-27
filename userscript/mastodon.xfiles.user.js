@@ -4,11 +4,9 @@
 // @description  :thinking_face:
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.0.1
+// @version      1.1.0
 
 // @include      https://*/web/*
-
-// @require      https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.15/howler.min.js
 // ==/UserScript==
 
 "use strict";
@@ -38,22 +36,46 @@ window.addEventListener(
             onUpdate(mutations) {
                 const mutation = mutations[0];
                 if (mutation.addedNodes.length != 0) {
-                    const text = mutation.addedNodes["0"].textContent;
-                    if (text.includes("X-Files Theme")) {
-                        console.log("X-Files Theme Detected", text);
-                        this.beep();
+                    const node = mutation.addedNodes["0"];
+                    const text = node.textContent;
+                    if (/x-?files/gim.test(text)) {
+                        console.log("X-Files Theme Detected", node);
+                        this.play();
                     }
                 }
             }
 
-            beep() {
-                const source =
-                    "https://stellaria.network/system/media_attachments/files/000/169/004/original/bed2700bef30a016.mp4";
-                const sound = new Howl({
-                    src: source,
-                    volume: 0.5
-                });
-                sound.play();
+            play() {
+                var volume = 0.5;
+                const settings =
+                    JSON.parse(
+                        localStorage.getItem("mizle.net_x-files theme")
+                    ) || {};
+                if ("volume" in settings) {
+                    volume = settings.volume;
+                }
+                const removePlayer = function(id) {
+                    document.getElementById(id).remove();
+                    console.log("X-Files Theme Player Removed");
+                };
+
+                const player = document.createElement("audio");
+                player.id =
+                    "x-files_" +
+                    Math.random()
+                        .toString(32)
+                        .substring(2);
+                player.src = "https://cldup.com/cnkhRDR-D3.mp3";
+                player.autoplay = true;
+                player.controls = true;
+                player.volume = volume;
+                document
+                    .querySelector(".drawer__inner")
+                    .insertBefore(
+                        player,
+                        document.querySelector(".drawer__inner__mastodon")
+                    );
+                setTimeout(removePlayer, 9000, player.id);
             }
         }
 
