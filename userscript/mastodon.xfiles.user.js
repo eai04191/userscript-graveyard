@@ -4,7 +4,7 @@
 // @description  :thinking_face:
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.0
+// @version      1.0.1
 
 // @include      https://*/web/*
 
@@ -37,12 +37,12 @@ window.addEventListener(
 
             onUpdate(mutations) {
                 const mutation = mutations[0];
-                console.log(mutation);
-
-                if (
-                    mutation.addedNodes["0"].innerText.includes("X-Files Theme")
-                ) {
-                    this.beep();
+                if (mutation.addedNodes.length != 0) {
+                    const text = mutation.addedNodes["0"].textContent;
+                    if (text.includes("X-Files Theme")) {
+                        console.log("X-Files Theme Detected");
+                        this.beep();
+                    }
                 }
             }
 
