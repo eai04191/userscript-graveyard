@@ -4,7 +4,7 @@
 // @description  :thinking_face:
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.1.0
+// @version      1.1.1
 
 // @include      https://*/web/*
 // ==/UserScript==
@@ -38,7 +38,7 @@ window.addEventListener(
                 if (mutation.addedNodes.length != 0) {
                     const node = mutation.addedNodes["0"];
                     const text = node.textContent;
-                    if (/x-?files/gim.test(text)) {
+                    if (/x[- ]?files/gim.test(text)) {
                         console.log("X-Files Theme Detected", node);
                         this.play();
                     }
