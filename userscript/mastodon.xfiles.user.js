@@ -4,7 +4,7 @@
 // @description  :thinking_face:
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.1.1
+// @version      1.2.0
 
 // @include      https://*/web/*
 // ==/UserScript==
@@ -38,6 +38,16 @@ window.addEventListener(
                 if (mutation.addedNodes.length != 0) {
                     const node = mutation.addedNodes["0"];
                     const text = node.textContent;
+                    var text = node.textContent;
+
+                    // 全角英数変換
+                    text = text.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {
+                        return String.fromCharCode(s.charCodeAt(0) - 65248);
+                    });
+
+                    // スペース削除
+                    text = text.replace(/\s+/g, "");
+
                     if (/x[- ]?files/gim.test(text)) {
                         console.log("X-Files Theme Detected", node);
                         this.play();
