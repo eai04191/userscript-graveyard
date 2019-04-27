@@ -4,7 +4,7 @@
 // @description  :thinking_face:
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.0.3
+// @version      1.0
 
 // @include      https://*/web/*
 
