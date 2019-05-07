@@ -48,11 +48,10 @@
     padding: 0;
 }
 
-.vl-tooltip-bottom > .vl-tooltip-wrap {
-    right: -15px;
-}
-
-.vl-tooltip-content {
-    position: absolute;
+.vl-tooltip-bottom.vl-tooltip-align-start > .vl-tooltip-wrap,
+.vl-tooltip-top.vl-tooltip-align-start > .vl-tooltip-wrap {
+    margin: unset;
     right: 0;
+    margin-right: -10px;
+    text-align: right;
 }
