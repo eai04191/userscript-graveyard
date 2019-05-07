@@ -1,0 +1,41 @@
+/* 以下をViolentmonkeyの設定 -> 高度な設定 -> カスタムスタイル に貼り付けてください */
+
+.script {
+    display: flex;
+    margin: 0;
+    padding: 0 10px;
+    border: none;
+    border-radius: 0;
+}
+
+.script-icon {
+    position: relative;
+    min-width: 1.8em;
+    min-height: 1.8em;
+    width: 1.8em;
+    height: 1.8em;
+    top: unset;
+    margin: auto;
+    margin-right: 2px;
+}
+
+.script-icon ~ * {
+    margin: 0;
+}
+
+.script-info {
+    width: 100%;
+    order: 1;
+}
+
+.script:after {
+    content: "";
+    position: relative;
+    order: 2;
+    flex: 1 1 auto;
+}
+
+.script-buttons {
+    order: 3;
+    min-width: calc(30px * 6 + 15px + 30px);
+}
