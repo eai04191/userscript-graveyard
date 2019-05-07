@@ -9,14 +9,15 @@
 }
 
 .script-icon {
+    --icon-size: 1.8em;
     position: relative;
-    min-width: 1.8em;
-    min-height: 1.8em;
-    width: 1.8em;
-    height: 1.8em;
+    min-width: var(--icon-size);
+    min-height: var(--icon-size);
+    width: var(--icon-size);
+    height: var(--icon-size);
     top: unset;
     margin: auto;
-    margin-right: 2px;
+    margin-right: .25em;
 }
 
 .script-icon ~ * {
@@ -26,13 +27,6 @@
 .script-info {
     width: 100%;
     order: 1;
-}
-
-.script:after {
-    content: "";
-    position: relative;
-    order: 2;
-    flex: 1 1 auto;
 }
 
 .script-buttons {
