@@ -47,3 +47,12 @@
 .script-message:empty {
     padding: 0;
 }
+
+.vl-tooltip-bottom > .vl-tooltip-wrap {
+    right: -15px;
+}
+
+.vl-tooltip-content {
+    position: absolute;
+    right: 0;
+}
