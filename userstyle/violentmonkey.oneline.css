@@ -17,7 +17,7 @@
     height: var(--icon-size);
     top: unset;
     margin: auto;
-    margin-right: .25em;
+    margin-right: 0.25em;
 }
 
 .script-icon ~ * {
@@ -32,4 +32,18 @@
 .script-buttons {
     order: 3;
     min-width: calc(30px * 6 + 15px + 30px);
+}
+
+.script-message {
+    white-space: nowrap;
+    position: absolute;
+    left: 40%;
+    background: #ffffff;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 90%;
+}
+
+.script-message:empty {
+    padding: 0;
 }
