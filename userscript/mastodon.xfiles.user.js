@@ -4,7 +4,7 @@
 // @description  :thinking_face:
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.2.0
+// @version      1.2.1
 
 // @include      https://*/web/*
 // ==/UserScript==
@@ -37,7 +37,6 @@ window.addEventListener(
                 const mutation = mutations[0];
                 if (mutation.addedNodes.length != 0) {
                     const node = mutation.addedNodes["0"];
-                    const text = node.textContent;
                     var text = node.textContent;
 
                     // 全角英数変換
