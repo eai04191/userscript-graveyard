@@ -3,7 +3,7 @@
 // @namespace    mizle.net
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.0
+// @version      0.0
 // @match        https://discordapp.com/*
 // @grant        none
 // ==/UserScript==
