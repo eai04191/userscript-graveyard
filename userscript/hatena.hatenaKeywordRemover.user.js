@@ -10,9 +10,13 @@
 // @include         *://*.hatenadiary.jp/*
 // @include         *://anond.hatelabo.jp/*
 // @description     Disable Hatena Keyword link
-// @version         0.1
+// @version         1.0
 // ==/UserScript==
 
-document.querySelectorAll(".keyword[href^='/keyword'], .keyword[href^='http://d.hatena.ne.jp/keyword'], .keyword[href^='https://d.hatena.ne.jp/keyword']").forEach(link => {
-  link.replaceWith(document.createTextNode(link.innerText));
-})
+document
+    .querySelectorAll(
+        ".keyword[href^='/keyword'], .keyword[href^='http://d.hatena.ne.jp/keyword'], .keyword[href^='https://d.hatena.ne.jp/keyword']"
+    )
+    .forEach(link => {
+        link.replaceWith(document.createTextNode(link.innerText));
+    });
