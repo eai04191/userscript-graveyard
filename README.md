@@ -12,9 +12,11 @@
 
 やる気が無いのですから、おそらく設定画面はありませんし、エラーは握りつぶされデバッグしづらく、必要のないDOMの変更をしてパフォーマンスに影響を与えているかもしれません。
 
-これらのスクリプトが満足に動くと期待しないでください。問題が発生したらissueを建てても良いですが、対応することはまずないと考えてください。
+これらのスクリプトが満足に動くと期待しないでください。問題があればissueを建ててもらえれば目は通しますが、対応はしないと思います。（ちょろいのでおだてればできる範囲は対応するでしょう）
 
-スクリプトはMITライセンスのため、あなたがforkして修正・公開するのは自由です。
+スクリプトはすべてMITライセンスのため、fork、公開するのは自由です。
+
+PRはおそらく受け入れます。
 
 ## 🎨 userstyle
 
@@ -24,23 +26,34 @@
 
 ### [twitter.javaStyleButton.user.css](/userstyle/twitter.javaStyleButton.user.css)
 
-![SS](https://i.imgur.com/Wk4Ykcf.png)
+<img src="https://i.imgur.com/Wk4Ykcf.png" align="right">
 
 Twitter のボタン（フォローとか）を[ジャバ](https://www.java.com/ja/download/)っぽくする。
 
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
 ### [mastodon.omoshiika.user.css](/userstyle/mastodon.omoshiika.user.css)
 
-![SS](https://mstdn.maud.io/system/media_attachments/files/001/988/721/original/adeebcea11bff48d.jpeg)
+<img src="https://mstdn.maud.io/system/media_attachments/files/001/988/721/original/adeebcea11bff48d.jpeg" align="right">
 
 連合タイムラインにアイコンだけ表示するようにする。
 
 > SNSはアイコンが10割なので連合タイムラインはアイコンだけ表示するようにしたら重しイカもしれない
 > https://mstdn.maud.io/users/Eai/statuses/100610017821558791
 
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
+### [mastodon.gaminghota.user.css](/userstyle/mastodon.gaminghota.user.css)
+
+[<img src="https://mstdn.maud.io/system/media_attachments/files/002/535/811/small/454eb3a4c9419a43.png" align="right">](https://mstdn.maud.io/system/media_attachments/files/002/535/811/original/454eb3a4c9419a43.mp4)
+
+https://mstdn.maud.io/users/Eai/statuses/101142623916415083
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
 ### [youtube.capture.user.css](/userstyle/youtube.capture.user.css)
 
-![SS](https://i.imgur.com/EJniMei.png)
+<img src="https://i.imgur.com/EJniMei.png" align="right" width="50%">
 
 YouTubeでシアターモードで再生中の動画の大きさを1920x1080にして、上に乗っかってるボタンなどを消す。
 
@@ -48,14 +61,27 @@ YouTubeでシアターモードで再生中の動画の大きさを1920x1080に�
 
 1920x1080で取るためにはそれより大きいディスプレイが必要。画像は2560x1440。
 
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
 ### [tissue.safemode.user.css](/userstyle/tissue.safemode.user.css)
 
-![SS](https://i.imgur.com/g1r8iXn.png)
+<img src="https://i.imgur.com/g1r8iXn.png" align="right" width="50%">
 
 [Tissue](https://shikorism.net/) のセンシティブな要素を隠すスタイル。
 
 センシティブな要素しかないだろ。
 
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
+### [nijie.fluid.user.css](/userstyle/nijie.fluid.user.css)
+
+<img src="https://i.imgur.com/6N0iXAR.png" align="right" width="50%">
+
+ニジエの作品ページで枠を100%にして絵を大きく表示するスタイル。
+
+めんどくさくてすべての要素の `box-sizing` をいじったので若干崩れる箇所がある。
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
 ### [](/userstyle/)
 
@@ -68,15 +94,17 @@ YouTubeでシアターモードで再生中の動画の大きさを1920x1080に�
 
 ### [mastodon.donsogigi.user.js](/userscript/mastodon.donsogigi.user.js)
 
-**[DEPRECATED]**
+<img src="https://mstdn.maud.io/system/media_attachments/files/002/415/143/small/c59d30ffcd762854.png" align="right">
 
-[![SS](https://mstdn.maud.io/system/media_attachments/files/002/415/143/small/c59d30ffcd762854.png)](https://mstdn.maud.io/system/media_attachments/files/002/415/143/original/c59d30ffcd762854.mp4)
+**[Defective]**
 
 `#そぎぎ`を追加するボタンを追加する。安易な`innerHTML`のせいですべてが死ぬ。
 
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
 ### [notestock.loginCodeButton.user.js](/userscript/notestock.loginCodeButton.user.js)
 
-**[DEPRECATED]**
+**[Deprecated]**
 
 認証画面にトゥートするボタンを追加する。
 
@@ -84,23 +112,33 @@ YouTubeでシアターモードで再生中の動画の大きさを1920x1080に�
 
 ### [pixiv.openWithMangaView.user.js](/userscript/pixiv.openWithMangaView.user.js)
 
-![SS](https://i.imgur.com/5gR5urk.png)
+<img src="https://i.imgur.com/5gR5urk.png" align="right">
+
+**[Deprecated]**
 
 pixivのユーザーのイラスト一覧の画面で、イラストの漫画ビューを直接開くボタンを追加する。
 
+現在はイラストページから漫画が見れるので必要なくなった。
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
 ### [github.relativeTime.user.js](/userscript/github.relativeTime.user.js)
 
-![SS](https://i.imgur.com/ok8frdf.png)
+<img src="https://i.imgur.com/ok8frdf.png" align="right">
 
 GitHubの時間表記`on 30 Jul 2018`などを`2018/7/30 22:41`といった表記に変更する。
 
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
 ### [picrew.mastodonIntegration.user.js](/userscript/picrew.mastodonIntegration.user.js)
 
-![SS](https://i.imgur.com/agpRoRC.png)
+<img src="https://i.imgur.com/agpRoRC.png" align="right" width=50%>
 
 picrewの完成画面で直接投稿できるボタンを追加する。
 
 使うには15,16行目のホストとトークンを書き換える。
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
 ### [bookmeter.hontoSearch.user.js](/userscript/bookmeter.hontoSearch.user.js)
 
@@ -108,14 +146,66 @@ picrewの完成画面で直接投稿できるボタンを追加する。
 
 `MutationObserver`を知らない頃に書いたので`waitForKeyelements.js`とか使ってるしもう何もかも終わり。
 
+そのうち直したい。
+
+### [hatena.hatenaKeywordRemover.user.js](/userscript/hatena.hatenaKeywordRemover.user.js)
+
+はてなブログとかではてなキーワードとかへのリンクを削るやつ。
+
+車輪の再発明。
+
+### [tissue.tagMute.user.js](/userscript/tissue.tagMute.user.js)
+
+[Tissue](https://shikorism.net/) にタグミュートのようなものを追加するやつ。
+
+使うときは14行目の配列を書き換える
+
+使ってるとタグミュートしていることを忘れるので注意。
+
+### [discord.image.user.js](/userscript/discord.image.user.js)
+
+**[Defective]**
+
+Discordで画像の保存を楽にするためのなにやら。
+
+画像の下にダウンロードボタンを付ける予定だったがオリジンが違うため`download`属性付きの`a`もblobを取ってくるやつもうまいこと行かずに頓挫。
+
+### [mastodon.bigben.user.js](/userscript/mastodon.bigben.user.js)
+
+https://mastodon.org.uk/@bigben のBONGがホームに流れたらぼんぐぼんぐしてくれる。
+
+https://stellaria.network/users/Eai/statuses/102006336379176131
+
+飽きる。
+
+### [mastodon.xfiles.user.js](/userscript/mastodon.xfiles.user.js)
+
+`x-files`あたりの文字がホームに流れたらX-filesのテーマが流れる。
+
+https://stellaria.network/users/Eai/statuses/101998013693873129
+
 ### [](/userscript/)
 
 ## 🔖 bookmarklet
 
 ### [mastodon.embed.js](/bookmarklet/mastodon.embed.js)
 
-![SS](https://i.imgur.com/Fuvon8m.png)
+<img src="https://i.imgur.com/Fuvon8m.png" align="right">
 
 Mastodonのトゥートページで実行すると埋め込みコードを得ることができる。
 
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
 ### [](/bookmarklet/)
+
+## ❓ その他
+
+### [violentmonkey.oneline.css](/userstyle/violentmonkey.oneline.css)
+
+<img src="https://media.stellaria.network/media_attachments/files/000/187/763/original/60ead13ae199b317.png" align="right" width="50%">
+
+Violentmonkeyの設定画面で1スクリプト1行で表示するCSS。
+
+Violentmonkeyの 設定 -> 高度な設定 -> カスタムスタイル に貼り付けて使用する。
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
