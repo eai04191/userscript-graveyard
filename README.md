@@ -94,11 +94,11 @@ YouTubeでシアターモードで再生中の動画の大きさを1920x1080に�
 
 ### [mastodon.donsogigi.user.js](/userscript/mastodon.donsogigi.user.js)
 
-<img src="https://mstdn.maud.io/system/media_attachments/files/002/415/143/small/c59d30ffcd762854.png" align="right">
+[<img src="https://media.mstdn.plusminus.io/media_attachments/files/000/229/109/small/d6f2fc844a6772f6.png" align="right">](https://media.mstdn.plusminus.io/media_attachments/files/000/229/109/original/d6f2fc844a6772f6.mp4)
 
-**[Defective]**
+`#そぎぎ`を追加するボタンを追加する。@mohemohe が直してくれた。
 
-`#そぎぎ`を追加するボタンを追加する。安易な`innerHTML`のせいですべてが死ぬ。
+[:don:そぎ by mohemohe · Pull Request #1 · eai04191/userscript-graveyard](https://github.com/eai04191/userscript-graveyard/pull/1)
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
