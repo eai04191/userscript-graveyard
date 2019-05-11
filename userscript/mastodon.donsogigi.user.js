@@ -20,8 +20,10 @@ window.addEventListener(
 
     function addSogigiButton() {
       const buttons = document.querySelector(".compose-form__buttons");
-      const sogigiHtml = `<button id="sogigi" title="そぎぎする" aria-label="そぎぎする" class="text-icon-button " aria-expanded="false" aria-controls="cw-spoiler-input">そぐ</button>`;
-      buttons.innerHTML = buttons.innerHTML + sogigiHtml;
+      const sogigiHtml = `<button id="sogigi" title="そぎぎする" aria-label="そぎぎする" class="text-icon-button " aria-expanded="false" aria-controls="cw-spoiler-sogigi">そぐ</button>`;
+      if (buttons) {
+        buttons.insertAdjacentHTML("beforeend", sogigiHtml);
+      }
     }
 
     function eventHandlerSogigi() {
