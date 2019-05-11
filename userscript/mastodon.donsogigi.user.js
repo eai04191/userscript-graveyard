@@ -13,9 +13,29 @@ window.addEventListener(
     document.getElementById("sogigi").onclick = eventHandlerSogigi;
 
     function sogigi() {
-      const textarea = document.querySelector("textarea");
-      const text = textarea.value;
-      textarea.value = text + " #そぎぎ";
+      const cwButton = document.querySelector('button[aria-controls="cw-spoiler-input"][aria-expanded="false"]');
+      const cwInput = document.querySelector('#cw-spoiler-input');
+      if (!cwButton) {
+        return false;
+      }
+      if (!cwInput) {
+        // NOTE: fallback old solution
+        const textarea = document.querySelector("textarea");
+        const text = textarea.value;
+        textarea.value = text + " #そぎぎ";
+        return true;
+      }
+        
+      cwButton.dispatchEvent(new Event("click", {
+        bubbles: true,
+        cancelable: true,
+      }));
+      setNativeValue(cwInput, "そぎぎ");
+      cwInput.dispatchEvent(new Event('input', {
+        bubbles: true,
+        cancelable: false,
+      }));
+      return true;
     }
 
     function addSogigiButton() {
@@ -29,7 +49,21 @@ window.addEventListener(
     function eventHandlerSogigi() {
       sogigi();
     }
-  },
 
+    // REF: https://github.com/facebook/react/issues/10135#issuecomment-401496776
+    function setNativeValue(element, value) {
+      const { set: valueSetter } = Object.getOwnPropertyDescriptor(element, 'value') || {}
+      const prototype = Object.getPrototypeOf(element)
+      const { set: prototypeValueSetter } = Object.getOwnPropertyDescriptor(prototype, 'value') || {}
+
+      if (prototypeValueSetter && valueSetter !== prototypeValueSetter) {
+        prototypeValueSetter.call(element, value)
+      } else if (valueSetter) {
+        valueSetter.call(element, value)
+      } else {
+        throw new Error('The given element does not have a value setter')
+      }
+    }
+  },
   false
 );
