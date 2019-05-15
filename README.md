@@ -83,6 +83,14 @@ YouTubeでシアターモードで再生中の動画の大きさを1920x1080に�
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
+### [notestock.searchcount.user.css](/userstyle/notestock.searchcount.user.css)
+
+<img src="https://i.imgur.com/twaNFRi.png" align="right">
+
+notestockの検索結果に見つかった件数を表示するスタイル。
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
 ### [](/userstyle/)
 
 

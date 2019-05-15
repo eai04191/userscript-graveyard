@@ -1,0 +1,25 @@
+/* ==UserStyle==
+@name           notestock search count
+@namespace      mizle.net
+@version        1.0.0
+@description    notestockの検索結果に件数を表示します
+@author         Eai
+@license        MIT
+@preprocessor   stylus
+==/UserStyle== */
+@-moz-document regexp("https://notestock.osa-p.net/.+q=.+") {
+    #note_list {
+        counter-reset: notecount;
+    }
+
+    .note::before {
+        position: absolute;
+        font-size: 0;
+        counter-increment: notecount;
+        content: counter(notecount);
+    }
+
+    #last_search::after {
+        content: "("counter(notecount)"件)";
+    }
+}
