@@ -7,8 +7,8 @@ window.player = {};
 player.play = function(
     source,
     { volume = 0.5, controls = false, removePlayerAfterPlayed = true },
-    insertNode,
-    referenceNode
+    insertNode = document.body,
+    referenceNode = null
 ) {
     return new Promise(resolve => {
         const player = document.createElement("audio");
