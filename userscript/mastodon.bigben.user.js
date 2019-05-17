@@ -4,7 +4,7 @@
 // @description  BONG
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.0.0
+// @version      1.0.1
 
 // @include      https://*/web/*
 // @require      https://raw.githubusercontent.com/eai04191/userscript-graveyard/master/userscript/lib/player.js

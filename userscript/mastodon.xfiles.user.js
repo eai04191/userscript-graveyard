@@ -4,7 +4,7 @@
 // @description  :thinking_face:
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.2.1
+// @version      1.2.2
 
 // @include      https://*/web/*
 // @require      https://raw.githubusercontent.com/eai04191/userscript-graveyard/master/userscript/lib/player.js
