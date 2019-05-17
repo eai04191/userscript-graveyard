@@ -150,11 +150,11 @@ picrewの完成画面で直接投稿できるボタンを追加する。
 
 ### [bookmeter.hontoSearch.user.js](/userscript/bookmeter.hontoSearch.user.js)
 
-読書メーターで本の詳細ページに出てくる「書斎で詳細を見る」にhontoでの検索を追加する。
+<img src="https://i.imgur.com/217fvkh.png" align="right">
 
-`MutationObserver`を知らない頃に書いたので`waitForKeyelements.js`とか使ってるしもう何もかも終わり。
+読書メーターで本の詳細ページに出てくる「書店で詳細を見る」にhontoでの検索リンクを追加する。
 
-そのうち直したい。
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
 ### [hatena.hatenaKeywordRemover.user.js](/userscript/hatena.hatenaKeywordRemover.user.js)
 
