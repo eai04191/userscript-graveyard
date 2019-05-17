@@ -8,6 +8,18 @@
     border-radius: 0;
 }
 
+.script.removed {
+    padding-bottom: unset;
+}
+
+.script.disabled, .script.removed {
+    background: unset;
+}
+
+.script:hover {
+    background: #e6e6e6;
+}
+
 .script-icon {
     --icon-size: 1.8em;
     position: relative;
