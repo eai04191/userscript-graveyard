@@ -1,0 +1,34 @@
+// 好きな場所にaudio要素を追加して音を鳴らすライブラリ
+
+"use strict";
+
+window.player = {};
+
+player.play = function(
+    source,
+    { volume = 0.5, controls = false, removePlayerAfterPlayed = true },
+    insertNode,
+    referenceNode
+) {
+    return new Promise(resolve => {
+        const player = document.createElement("audio");
+        player.addEventListener("ended", () => {
+            if (removePlayerAfterPlayed) {
+                this.remove(player.id);
+            }
+            resolve(player);
+        });
+        player.id = Math.random()
+            .toString(32)
+            .substring(2);
+        player.src = source;
+        player.autoplay = true;
+        player.controls = controls;
+        player.volume = volume;
+        insertNode.insertBefore(player, referenceNode);
+    });
+};
+
+player.remove = function(id) {
+    document.getElementById(id).remove();
+};
