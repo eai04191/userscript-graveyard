@@ -7,6 +7,7 @@
 // @version      1.0.0
 
 // @include      https://*/web/*
+// @require      https://raw.githubusercontent.com/eai04191/userscript-graveyard/master/userscript/lib/player.js
 // ==/UserScript==
 
 "use strict";
@@ -28,7 +29,7 @@ window.addEventListener(
                         .closest("div.column") // Home Column
                         .querySelector("div.item-list"),
                     {
-                        childList: true
+                        childList: true,
                     }
                 );
             }
@@ -63,39 +64,20 @@ window.addEventListener(
                 await this.play(bongLast);
             }
 
-            play(src) {
-                return new Promise(resolve => {
-                    var volume = 0.5;
-                    const settings =
-                        JSON.parse(localStorage.getItem("mizle.bigben")) || {};
-                    if ("volume" in settings) {
-                        volume = settings.volume;
-                    }
-                    const player = document.createElement("audio");
-                    player.addEventListener("ended", () => {
-                        this.removePlayer(player.id);
-                        resolve(player);
-                    });
-                    player.id =
-                        "bigben_" +
-                        Math.random()
-                            .toString(32)
-                            .substring(2);
-                    player.src = src;
-                    player.autoplay = true;
-                    player.controls = false;
-                    player.volume = volume;
-                    document
-                        .querySelector(".drawer__inner")
-                        .insertBefore(
-                            player,
-                            document.querySelector(".drawer__inner__mastodon")
-                        );
-                });
-            }
+            play(source) {
+                var volume = 0.5;
+                const settings =
+                    JSON.parse(localStorage.getItem("mizle.bigben")) || {};
+                if ("volume" in settings) {
+                    volume = settings.volume;
+                }
 
-            removePlayer(id) {
-                document.getElementById(id).remove();
+                return player.play(
+                    source,
+                    { volume: volume },
+                    document.querySelector(".drawer__inner"),
+                    document.querySelector(".drawer__inner__mastodon")
+                );
             }
         }
 

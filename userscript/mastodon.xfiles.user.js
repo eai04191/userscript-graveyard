@@ -7,6 +7,7 @@
 // @version      1.2.1
 
 // @include      https://*/web/*
+// @require      https://raw.githubusercontent.com/eai04191/userscript-graveyard/master/userscript/lib/player.js
 // ==/UserScript==
 
 "use strict";
@@ -28,7 +29,7 @@ window.addEventListener(
                         .closest("div.column") // Home Column
                         .querySelector("div.item-list"),
                     {
-                        childList: true
+                        childList: true,
                     }
                 );
             }
@@ -63,28 +64,14 @@ window.addEventListener(
                 if ("volume" in settings) {
                     volume = settings.volume;
                 }
-                const removePlayer = function(id) {
-                    document.getElementById(id).remove();
-                    console.log("X-Files Theme Player Removed");
-                };
+                const xfiles = "https://cldup.com/cnkhRDR-D3.mp3";
 
-                const player = document.createElement("audio");
-                player.id =
-                    "x-files_" +
-                    Math.random()
-                        .toString(32)
-                        .substring(2);
-                player.src = "https://cldup.com/cnkhRDR-D3.mp3";
-                player.autoplay = true;
-                player.controls = true;
-                player.volume = volume;
-                document
-                    .querySelector(".drawer__inner")
-                    .insertBefore(
-                        player,
-                        document.querySelector(".drawer__inner__mastodon")
-                    );
-                setTimeout(removePlayer, 9000, player.id);
+                player.play(
+                    xfiles,
+                    { volume: volume },
+                    document.querySelector(".drawer__inner"),
+                    document.querySelector(".drawer__inner__mastodon")
+                );
             }
         }
 
