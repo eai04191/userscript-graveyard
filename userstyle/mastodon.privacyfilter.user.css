@@ -1,0 +1,90 @@
+/* ==UserStyle==
+@name           Mastodon プライバシーに配慮するやつ
+@namespace      mizle.net
+@version        1.0.2
+@description    スクショ取るときに使ったりすると良い
+@author         Eai
+@license        MIT
+@preprocessor   stylus
+==/UserStyle== */
+@-moz-document regexp("https://.+/web/.+") {
+    :root {
+        --text-color: transparent;
+        --bg-color: #606984;
+    }
+
+    .emojione,
+    .muted .emojione {
+        opacity: 0;
+    }
+
+    .status__avatar,
+    .account__wrapper {
+        .account__avatar,
+        .account__avatar-overlay div {
+            filter: contrast(0) brightness(.75);
+            background-color: var(--bg-color);
+        }
+    }
+
+    .status__wrapper {
+        .status__prepend span {
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            .status__display-name strong {
+                color: var(--text-color);
+            }
+        }
+
+        .status {
+            .status__info {
+                .display-name strong,
+                .display-name__account,
+                time {
+                    color: var(--text-color);
+                    background-color: var(--bg-color);
+                }
+            }
+
+            .status__content {
+                p,
+                a,
+                .fa {
+                    color: var(--text-color);
+                    background-color: var(--bg-color);
+                }
+            }
+
+            .media-gallery,
+            .status-card.compact {
+                filter: contrast(0) brightness(.75);
+                background-color: var(--bg-color);
+            }
+        }
+
+        .attachment-list.compact {
+            a,
+            .fa {
+                color: var(--text-color);
+                background-color: var(--bg-color);
+            }
+        }
+    }
+
+    .notification {
+        .notification__message span {
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .account {
+            .display-name {
+                strong,
+                span {
+                    color: var(--text-color);
+                    background-color: var(--bg-color);
+                }
+            }
+        }
+    }
+}

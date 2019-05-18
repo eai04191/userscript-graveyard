@@ -91,6 +91,22 @@ notestockの検索結果に見つかった件数を表示するスタイル。
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
+### [github.expandItems.user.css](/userstyle/github.expandItems.user.css)
+
+<img src="https://i.imgur.com/VpTMmsw.png" align="right" width="50%">
+
+GitHubのタイムラインでたたまれる項目を常に展開するスタイル。
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
+### [mastodon.privacyfilter.user.css](/userstyle/mastodon.privacyfilter.user.css)
+
+<img src="https://i.imgur.com/NBKEraL.png" align="right" width="50%">
+
+MastodonのWebUIから個人を特定できそうなのを隠すスタイル。
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
 ### [](/userstyle/)
 
 

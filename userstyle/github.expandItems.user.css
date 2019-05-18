@@ -1,0 +1,18 @@
+/* ==UserStyle==
+@name           GitHubのタイムラインでたたまれている項目を常に展開するやつ
+@namespace      mizle.net
+@version        1.0.1
+@description    だよ
+@author         Eai
+@license        MIT
+@preprocessor   stylus
+==/UserStyle== */
+@-moz-document url("https://github.com/") {
+    button.js-details-target {
+        display: none;
+    }
+
+    .Details:not(.Details--on) div.Details-content--hidden {
+        display: block !important;
+    }
+}
