@@ -214,6 +214,16 @@ https://stellaria.network/users/Eai/statuses/101998013693873129
 
 https://stellaria.network/users/Eai/statuses/102163905594645230
 
+### [mastodon.nbsp.user.js](/userscript/mastodon.nbsp.user.js)
+
+<img src="https://i.imgur.com/n9XUNfY.png" align="right">
+
+半角スペースをZWNBSPに変換するボタンを追加する。
+
+[CodePenで前作った](https://codepen.io/eai/full/mGVOLj)けどやはり投稿画面にあったほうが便利なので。
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
 ### [](/userscript/)
 
 ## 🔖 bookmarklet
