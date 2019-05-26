@@ -208,6 +208,12 @@ https://stellaria.network/users/Eai/statuses/102006336379176131
 
 https://stellaria.network/users/Eai/statuses/101998013693873129
 
+### [mastodon.ussr.user.js](/userscript/mastodon.ussr.user.js)
+
+☭や<img src="https://media.stellaria.network/custom_emojis/images/000/000/767/static/Hammer_and_sickle_red_on_transparent-min.png" width="16px">がホームに流れたらソビエト連邦の国歌が流れる。
+
+https://stellaria.network/users/Eai/statuses/102163905594645230
+
 ### [](/userscript/)
 
 ## 🔖 bookmarklet
