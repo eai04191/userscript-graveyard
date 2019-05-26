@@ -107,6 +107,14 @@ MastodonのWebUIから個人を特定できそうなのを隠すスタイル。
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
+### [google.selectableLyrics.user.css](/userstyle/google.selectableLyrics.user.css)
+
+<img src="https://i.imgur.com/YJoF5OB.png" align="right" width="50%">
+
+Googleの検索結果に出てくる歌詞を選択可能にする。
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
 ### [](/userstyle/)
 
 

@@ -1,0 +1,14 @@
+/* ==UserStyle==
+@name           Google Selectable Lyrics
+@namespace      mizle.net
+@version        1.0.0
+@description    Lyrics be selectable.
+@author         Eai
+@license        MIT
+@preprocessor   stylus
+==/UserStyle== */
+@-moz-document url-prefix("https://www.google.com/search?q=") {
+    g-expandable-content {
+        user-select: unset !important;
+    }
+}
