@@ -9,17 +9,17 @@
 // ==/UserScript==
 
 (function() {
-  "use strict";
+    "use strict";
 
-  window.addEventListener("DOMNodeInserted", replaceRelativeTime, false);
+    window.addEventListener("DOMNodeInserted", replaceRelativeTime, false);
 
-  function replaceRelativeTime() {
-    document.querySelectorAll("relative-time").forEach(function(element) {
-      element.innerText = element.title
-        .replace("JST", "")
-        .replace("日", "")
-        .replace(/[年月]/g, "/");
-    });
-  }
-  replaceRelativeTime();
+    function replaceRelativeTime() {
+        document.querySelectorAll("relative-time").forEach(function(element) {
+            element.innerText = element.title
+                .replace("JST", "")
+                .replace("日", "")
+                .replace(/[年月]/g, "/");
+        });
+    }
+    replaceRelativeTime();
 })();

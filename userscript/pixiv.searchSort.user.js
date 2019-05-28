@@ -9,13 +9,15 @@
 // @require      https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.js
 // ==/UserScript==
 
+/*global tinysort*/
+
 (function() {
     "use strict";
 
     const config = {
         childList: true,
     };
-    const observer = new MutationObserver(function(record) {
+    const observer = new MutationObserver(function() {
         fook();
     });
 

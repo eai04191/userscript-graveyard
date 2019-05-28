@@ -67,7 +67,7 @@
         childList: true,
         subtree: true,
     };
-    const observer = new MutationObserver(function(record) {
+    const observer = new MutationObserver(function() {
         observer.disconnect();
         addHonto();
         observer.observe(document.body, config);

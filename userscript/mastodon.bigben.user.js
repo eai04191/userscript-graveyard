@@ -9,6 +9,7 @@
 // @include      https://*/web/*
 // @require      https://raw.githubusercontent.com/eai04191/userscript-graveyard/master/userscript/lib/player.js
 // ==/UserScript==
+/*global player*/
 
 "use strict";
 

@@ -1,4 +1,5 @@
 // 好きな場所にaudio要素を追加して音を鳴らすライブラリ
+/*global player*/
 
 "use strict";
 
