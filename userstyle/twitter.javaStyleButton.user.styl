@@ -9,23 +9,23 @@
 @-moz-document domain("twitter.com") {
   .EdgeButton,
   .EdgeButton:visited {
+    height: 35px;
     background-color: transparent;
     background-image: var(--java-bg);
-    height: 35px;
-    background-size: 100% calc(35px * 2);
     background-repeat: no-repeat;
-    border-radius: 0;
+    background-size: 100% calc(35px * 2);
     border: none;
+    border-radius: 0;
 
     &:hover {
-      background-position-y: bottom;
       background-color: transparent;
+      background-position-y: bottom;
     }
 
     > span {
-      color: white;
       font-size: 1.2em;
       font-weight: bold;
+      color: white;
     }
   }
 

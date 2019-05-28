@@ -2,8 +2,8 @@
 
 .script {
     display: flex;
-    margin: 0;
     padding: 0 10px;
+    margin: 0;
     border: none;
     border-radius: 0;
 }
@@ -23,11 +23,11 @@
 .script-icon {
     --icon-size: 1.8em;
     position: relative;
-    min-width: var(--icon-size);
-    min-height: var(--icon-size);
-    width: var(--icon-size);
-    height: var(--icon-size);
     top: unset;
+    width: var(--icon-size);
+    min-width: var(--icon-size);
+    height: var(--icon-size);
+    min-height: var(--icon-size);
     margin: auto;
     margin-right: 0.25em;
 }
@@ -37,8 +37,8 @@
 }
 
 .script-info {
-    width: 100%;
     order: 1;
+    width: 100%;
 }
 
 .script-buttons {
@@ -47,13 +47,13 @@
 }
 
 .script-message {
-    white-space: nowrap;
     position: absolute;
     left: 40%;
-    background: #ffffff;
-    border-radius: 3px;
     padding: 3px;
     font-size: 90%;
+    white-space: nowrap;
+    background: #ffffff;
+    border-radius: 3px;
 }
 
 .script-message:empty {
@@ -62,8 +62,8 @@
 
 .vl-tooltip-bottom.vl-tooltip-align-start > .vl-tooltip-wrap,
 .vl-tooltip-top.vl-tooltip-align-start > .vl-tooltip-wrap {
-    margin: unset;
     right: 0;
+    margin: unset;
     margin-right: -10px;
     text-align: right;
 }
