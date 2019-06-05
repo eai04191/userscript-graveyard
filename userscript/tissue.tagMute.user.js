@@ -3,7 +3,7 @@
 // @namespace    mizle.net
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      0.1
+// @version      0.1.0
 // @match        https://shikorism.net/*
 // @grant        none
 // ==/UserScript==

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         notestock - Add Login Code Toot Button.
 // @namespace    https://mizle.net/
-// @version      0.1
+// @version      0.1.0
 // @description  Add Login Code Toot Button in notestock authentication screen.
 // @author       Eai <eai@mizle.net>
 // @match        https://notestock.osa-p.net/reserve.html

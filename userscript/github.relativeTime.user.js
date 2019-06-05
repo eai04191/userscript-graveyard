@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub relative-time converter
 // @namespace    https://mizle.net/
-// @version      0.2
+// @version      0.2.0
 // @description  うるせ～～～～～～～～！英語よめね～～～～～～～～～～！！
 // @author       Eai
 // @match        https://github.com/*

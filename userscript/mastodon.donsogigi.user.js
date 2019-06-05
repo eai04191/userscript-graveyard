@@ -2,7 +2,7 @@
 // @name         :don: Sogigi
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.1
+// @version      1.1.0
 // @include      https://mstdn.maud.io/web/*
 // ==/UserScript==
 

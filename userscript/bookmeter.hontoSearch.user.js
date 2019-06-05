@@ -2,7 +2,7 @@
 // @name         Bookmeter honto search
 // @name:ja-JP   読書メーターにhontoのリンクを追加する
 // @namespace    mizle.net
-// @version      1.0
+// @version      1.0.0
 // @description  Add honto book search link into bookmeter.
 // @icon         https://honto.jp/favicon.ico
 // @author       Eai <eai@mizle.net>

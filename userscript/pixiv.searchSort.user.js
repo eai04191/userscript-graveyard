@@ -3,7 +3,7 @@
 // @namespace    mizle.net
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.0
+// @version      1.0.0
 // @match        https://www.pixiv.net/search.php?*
 // @grant        none
 // @require      https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.js

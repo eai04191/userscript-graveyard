@@ -10,7 +10,7 @@
 // @include         *://*.hatenadiary.jp/*
 // @include         *://anond.hatelabo.jp/*
 // @description     Disable Hatena Keyword link
-// @version         1.0
+// @version         1.0.0
 // ==/UserScript==
 
 document

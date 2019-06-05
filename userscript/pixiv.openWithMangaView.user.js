@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Pixivで1秒でも早く漫画ビューで見たいときに使うスクリプト
 // @namespace    mizle.net
-// @version      0.1
+// @version      0.1.0
 // @description  忙しい忙しい
 // @author       Eai
 // @match        https://www.pixiv.net/member.php?id=*

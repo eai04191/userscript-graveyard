@@ -3,7 +3,7 @@
 // @namespace    mizle.net
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.0
+// @version      1.0.0
 // @require      https://unpkg.com/axios/dist/axios.min.js
 // @match        https://picrew.me/image_maker/*/complete?cd=*
 // ==/UserScript==
