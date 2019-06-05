@@ -232,6 +232,29 @@ https://stellaria.network/users/Eai/statuses/102163905594645230
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
+### [mouneyou.mastodon.user.js](/userscript/mouneyou.mastodon.user.js)
+
+<img src="https://i.imgur.com/d0XxifO.png" align="right" width=40%>
+
+[てゆうかもう寝よう。](http://mouneyou.rgx6.com/)からMastodonに投稿するボタンを追加する。
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
+#### 設定項目
+
+`GM_getValue`でホスト名とトークンを取得するので設定しておく。
+
+| キー  | 値                                                                               |
+| ----- | -------------------------------------------------------------------------------- |
+| host  | お使いのMastodonサーバーのホスト名                                               |
+| token | Mastodonの設定から**開発**->**新規アプリ**で作成して、できた**アクセストークン** |
+
+Violentmonkeyならインストールした後ダッシュボードから**編集**->**値**
+
+![](https://i.imgur.com/7AZWVtz.png)
+
+Tampermonkeyはわからん（ないっぽい）（つまり使えないということです）
+
 ### [](/userscript/)
 
 ## 🔖 bookmarklet
