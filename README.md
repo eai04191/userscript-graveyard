@@ -24,7 +24,7 @@ PRはおそらく受け入れます。
 
 リポジトリになってるのは[user:eai04191 topic:userstyle](https://github.com/search?q=user%3Aeai04191+topic%3Auserstyle)で確認して。
 
-### [twitter.javaStyleButton.user.css](/userstyle/twitter.javaStyleButton.user.css)
+### [twitter.javaStyleButton.user.styl](/userstyle/twitter.javaStyleButton.user.styl)
 
 <img src="https://i.imgur.com/Wk4Ykcf.png" align="right">
 
@@ -32,7 +32,7 @@ Twitter のボタン（フォローとか）を[ジャバ](https://www.java.com/
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
-### [mastodon.omoshiika.user.css](/userstyle/mastodon.omoshiika.user.css)
+### [mastodon.omoshiika.user.styl](/userstyle/mastodon.omoshiika.user.styl)
 
 <img src="https://mstdn.maud.io/system/media_attachments/files/001/988/721/original/adeebcea11bff48d.jpeg" align="right">
 
@@ -43,7 +43,7 @@ Twitter のボタン（フォローとか）を[ジャバ](https://www.java.com/
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
-### [mastodon.gaminghota.user.css](/userstyle/mastodon.gaminghota.user.css)
+### [mastodon.gaminghota.user.styl](/userstyle/mastodon.gaminghota.user.styl)
 
 [<img src="https://mstdn.maud.io/system/media_attachments/files/002/535/811/small/454eb3a4c9419a43.png" align="right">](https://mstdn.maud.io/system/media_attachments/files/002/535/811/original/454eb3a4c9419a43.mp4)
 
@@ -51,7 +51,7 @@ https://mstdn.maud.io/users/Eai/statuses/101142623916415083
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
-### [youtube.capture.user.css](/userstyle/youtube.capture.user.css)
+### [youtube.capture.user.styl](/userstyle/youtube.capture.user.styl)
 
 <img src="https://i.imgur.com/EJniMei.png" align="right" width="50%">
 
@@ -63,7 +63,7 @@ YouTubeでシアターモードで再生中の動画の大きさを1920x1080に�
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
-### [tissue.safemode.user.css](/userstyle/tissue.safemode.user.css)
+### [tissue.safemode.user.styl](/userstyle/tissue.safemode.user.styl)
 
 <img src="https://i.imgur.com/g1r8iXn.png" align="right" width="50%">
 
@@ -73,7 +73,7 @@ YouTubeでシアターモードで再生中の動画の大きさを1920x1080に�
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
-### [nijie.fluid.user.css](/userstyle/nijie.fluid.user.css)
+### [nijie.fluid.user.styl](/userstyle/nijie.fluid.user.styl)
 
 <img src="https://i.imgur.com/6N0iXAR.png" align="right" width="50%">
 
@@ -83,7 +83,7 @@ YouTubeでシアターモードで再生中の動画の大きさを1920x1080に�
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
-### [notestock.searchcount.user.css](/userstyle/notestock.searchcount.user.css)
+### [notestock.searchcount.user.styl](/userstyle/notestock.searchcount.user.styl)
 
 <img src="https://i.imgur.com/twaNFRi.png" align="right">
 
@@ -91,7 +91,7 @@ notestockの検索結果に見つかった件数を表示するスタイル。
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
-### [github.expandItems.user.css](/userstyle/github.expandItems.user.css)
+### [github.expandItems.user.styl](/userstyle/github.expandItems.user.styl)
 
 <img src="https://i.imgur.com/VpTMmsw.png" align="right" width="50%">
 
@@ -99,7 +99,7 @@ GitHubのタイムラインでたたまれる項目を常に展開するスタ�
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
-### [mastodon.privacyfilter.user.css](/userstyle/mastodon.privacyfilter.user.css)
+### [mastodon.privacyfilter.user.styl](/userstyle/mastodon.privacyfilter.user.styl)
 
 <img src="https://i.imgur.com/NBKEraL.png" align="right" width="50%">
 
@@ -107,7 +107,7 @@ MastodonのWebUIから個人を特定できそうなのを隠すスタイル。
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
-### [google.selectableLyrics.user.css](/userstyle/google.selectableLyrics.user.css)
+### [google.selectableLyrics.user.styl](/userstyle/google.selectableLyrics.user.styl)
 
 <img src="https://i.imgur.com/YJoF5OB.png" align="right" width="50%">
 
