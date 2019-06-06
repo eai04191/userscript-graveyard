@@ -1,4 +1,5 @@
 # Userscript Graveyard ⚰️
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 [![forthebadge](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com)
 
@@ -280,3 +281,15 @@ Violentmonkeyの設定画面で1スクリプト1行で表示するCSS。
 Violentmonkeyの 設定 -> 高度な設定 -> カスタムスタイル に貼り付けて使用する。
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://github.com/mohemohe"><img src="https://avatars3.githubusercontent.com/u/5028163?v=4" width="100px;" alt="mohemohe"/><br /><sub><b>mohemohe</b></sub></a><br /><a href="https://github.com/eai04191/userscript-graveyard/commits?author=mohemohe" title="Code">💻</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
