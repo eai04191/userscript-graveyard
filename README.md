@@ -1,6 +1,4 @@
 # Userscript Graveyard ⚰️
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-
 [![forthebadge](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com)
 
 はかば。
@@ -288,7 +286,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://github.com/mohemohe"><img src="https://avatars3.githubusercontent.com/u/5028163?v=4" width="100px;" alt="mohemohe"/><br /><sub><b>mohemohe</b></sub></a><br /><a href="https://github.com/eai04191/userscript-graveyard/commits?author=mohemohe" title="Code">💻</a></td></tr></table>
+<table><tr><td align="center"><a href="https://mizle.net"><img src="https://avatars1.githubusercontent.com/u/3516343?v=4" width="100px;" alt="Aoi Irie"/><br /><sub><b>Aoi Irie</b></sub></a><br /><a href="https://github.com/eai04191/userscript-graveyard/commits?author=eai04191" title="Code">💻</a> <a href="https://github.com/eai04191/userscript-graveyard/commits?author=eai04191" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/mohemohe"><img src="https://avatars3.githubusercontent.com/u/5028163?v=4" width="100px;" alt="mohemohe"/><br /><sub><b>mohemohe</b></sub></a><br /><a href="https://github.com/eai04191/userscript-graveyard/commits?author=mohemohe" title="Code">💻</a></td></tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
