@@ -19,5 +19,6 @@
   "projectName": "userscript-graveyard",
   "projectOwner": "eai04191",
   "repoType": "github",
-  "repoHost": "https://github.com"
+  "repoHost": "https://github.com",
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=for-the-badge)](#contributors)"
 }
