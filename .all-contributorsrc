@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "mohemohe",
+      "name": "mohemohe",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5028163?v=4",
+      "profile": "https://github.com/mohemohe",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "userscript-graveyard",
+  "projectOwner": "eai04191",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=for-the-badge)](#contributors)"
+}
