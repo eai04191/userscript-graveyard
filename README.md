@@ -254,6 +254,10 @@ Violentmonkeyならインストールした後ダッシュボードから**編�
 
 Tampermonkeyはわからん（ないっぽい）（つまり使えないということです）
 
+### [creativemarket.freeItemsAutoBuy.user.js](/userscript/creativemarket.freeItemsAutoBuy.user.js)
+
+[Creative MarketのFree Goods Of The Week](https://creativemarket.com/free-goods)を開いたときに未購入の商品があれば自動で購入する。
+
 ### [](/userscript/)
 
 ## 🔖 bookmarklet
