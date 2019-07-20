@@ -258,6 +258,16 @@ Tampermonkeyはわからん（ないっぽい）（つまり使えないとい�
 
 [Creative MarketのFree Goods Of The Week](https://creativemarket.com/free-goods)を開いたときに未購入の商品があれば自動で購入する。
 
+### [twitter.downloadOriginalImage.user.js](/userscript/twitter.downloadOriginalImage.user.js)
+
+<img src="https://i.imgur.com/9Nv5Smh.gif" align="right" width=50%>
+
+新しいTwitterのUI用に書いた原寸画像ダウンローダー
+
+画像の詳細かツイートの詳細を開いた状態でDキーを押すと、その時表示している画像の原寸画像を全てダウンロードする。
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
 ### [](/userscript/)
 
 ## 🔖 bookmarklet
