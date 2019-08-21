@@ -1,13 +1,14 @@
 /* ==UserStyle==
 @name           Google Selectable Lyrics
 @namespace      mizle.net
-@version        1.1.0
+@version        1.1.1
 @description    Lyrics be selectable.
 @author         Eai
 @license        MIT
 @preprocessor   stylus
 ==/UserStyle== */
 @-moz-document url-prefix("https://www.google.com/search?") {
+    g-expandable-content,
     div[data-lyricid],
     div[data-lyricid] + div {
         user-select: unset !important;
