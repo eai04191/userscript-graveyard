@@ -268,6 +268,10 @@ Tampermonkeyはわからん（ないっぽい）（つまり使えないとい�
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
+### [tissue.editButton.user.js](/userscript/tissue.editButton.user.js)
+
+Tissueのお惣菜コーナーで自分のチェックインに編集ボタンを追加する。
+
 ### [](/userscript/)
 
 ## 🔖 bookmarklet
