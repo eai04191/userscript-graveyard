@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mastodon プライバシーに配慮するやつ
 @namespace      mizle.net
-@version        1.0.2
+@version        1.0.3
 @description    スクショ取るときに使ったりすると良い
 @author         Eai
 @license        MIT
@@ -22,14 +22,14 @@
     .account__wrapper {
         .account__avatar,
         .account__avatar-overlay div {
-            background-color: var(--bg-color);
             filter: contrast(0) brightness(.75);
+            background-color: var(--bg-color);
         }
     }
 
     .status__wrapper {
-        .status__prepend span {
-            color: var(--text-color);
+        .status__prepend > span {
+            color: var(--text-color) !important;
             background-color: var(--bg-color);
             .status__display-name strong {
                 color: var(--text-color);
@@ -38,6 +38,10 @@
 
         .status {
             .status__info {
+                .display-name {
+                    text-overflow: unset;
+                }
+
                 .display-name strong,
                 .display-name__account,
                 time {
@@ -57,8 +61,8 @@
 
             .media-gallery,
             .status-card.compact {
-                background-color: var(--bg-color);
                 filter: contrast(0) brightness(.75);
+                background-color: var(--bg-color);
             }
         }
 
@@ -72,7 +76,7 @@
     }
 
     .notification {
-        .notification__message span {
+        .notification__message span a {
             color: var(--text-color);
             background-color: var(--bg-color);
         }
@@ -84,6 +88,27 @@
                     color: var(--text-color);
                     background-color: var(--bg-color);
                 }
+            }
+        }
+    }
+
+    .conversation {
+        .conversation__avatar .account__avatar-composite div {
+            filter: contrast(0) brightness(.75);
+            background-color: var(--bg-color);
+        }
+
+        .conversation__content {
+            .conversation__content__names {
+                    text-overflow: unset;
+            }
+            
+            .conversation__content__names *,
+            .status__content__text p,
+            .status__content__text p a,
+            time {
+                color: var(--text-color);
+                background-color: var(--bg-color);
             }
         }
     }
