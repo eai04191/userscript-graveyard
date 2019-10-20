@@ -31,9 +31,7 @@
         button.style.backgroundColor = "#2b90d9";
         button.style.backgroundSize = "50%";
         button.style.backgroundPosition = "center center";
-        button.style.backgroundImage = `url("https://${
-            mastodon.host
-        }/favicon.ico")`;
+        button.style.backgroundImage = `url("https://${mastodon.host}/favicon.ico")`;
         button.innerHTML = "<p>トゥート</p>";
         button.removeAttribute("href");
     }
