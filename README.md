@@ -272,6 +272,16 @@ Tampermonkeyはわからん（ないっぽい）（つまり使えないとい�
 
 Tissueのお惣菜コーナーで自分のチェックインに編集ボタンを追加する。
 
+### [gumroad.permalinkInLibrary.user.js](/userscript/gumroad.permalinkInLibrary.user.js)
+
+<img src="https://i.imgur.com/q0kXj9Z.png" align="right">
+
+Gumroadのライブラリにパーマリンクのアイコンを追加する。
+
+クリックイベントがうまく処理できてないので右クリックしてリンクをコピーするのがベター
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
 ### [](/userscript/)
 
 ## 🔖 bookmarklet
