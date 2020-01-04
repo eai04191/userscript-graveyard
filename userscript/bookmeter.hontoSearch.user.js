@@ -47,11 +47,11 @@
                 style.innerHTML = `
                 <style>
                     .books.sidebar .sidebar__group .group__shop-list .shop-list__item--honto>a{
-                      padding-bottom: 10px;
+                        padding-bottom: 10px;
                     }
                     .books.sidebar .sidebar__group .group__shop-list .shop-list__item--honto>a>img {
-                      width: 30%;
-                      height: auto;
+                        width: 30%;
+                        height: auto;
                     }
                 </style>`;
                 document
