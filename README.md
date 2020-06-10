@@ -141,6 +141,8 @@ Googleの検索結果に出てくる歌詞を選択可能にする。
 
 現在は公式にトゥート、note するボタンが追加された。
 
+続編: [notestock.AutoLogin.user.js](#notestockautoLoginuserjs)
+
 ### [pixiv.openWithMangaView.user.js](/userscript/pixiv.openWithMangaView.user.js)
 
 <img src="https://i.imgur.com/5gR5urk.png" align="right">
@@ -293,6 +295,14 @@ Twitterで画像を見ている時に矢印上と矢印下でページ送りが�
 同様に前にスレッドがある時、1枚目の画像をを見ているときに矢印上で送ると、前のツイートの4番目の画像に戻ることができる。
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
+### [notestock.AutoLogin.user.js](/userscript/notestock.AutoLogin.user.js)
+
+notestockで自動でログインしてくれるやつ
+
+使う前にトークンとか設定すること。
+
+設定の例: ![設定](https://i.imgur.com/SHk7EMO.png)
 
 ### [](/userscript/)
 
