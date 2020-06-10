@@ -2,7 +2,7 @@
 // @name         Twitter Better Arrow
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.0.0
+// @version      1.0.1
 // @match        https://twitter.com/*
 // @require      https://cdn.jsdelivr.net/npm/@violentmonkey/shortcut@1
 // ==/UserScript==
@@ -72,11 +72,7 @@
             const arrows = document.querySelectorAll(
                 `[role="button"] [style*="9999px"]`
             );
-            if (arrows[1]) {
-                arrows[1].click();
-            } else {
-                arrows[0].click();
-            }
+            arrows[1] ? arrows[1].click() : arrows[0].click();
         }
     });
 })();
