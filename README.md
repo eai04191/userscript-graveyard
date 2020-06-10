@@ -282,6 +282,18 @@ Gumroadのライブラリにパーマリンクのアイコンを追加する。
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
+### [twitter.betterArrow.user.js](/userscript/twitter.betterArrow.user.js)
+
+<img src="https://cldup.com/g7pn-DKY22.gif" align="right">
+
+Twitterで画像を見ている時に矢印上と矢印下でページ送りができるようになる。
+
+さらにスレッドが続いていて、4枚目の画像を見ている時に矢印下で送ると、次のツイートの1番目の画像を開けるようになる。
+
+同様に前にスレッドがある時、1枚目の画像をを見ているときに矢印上で送ると、前のツイートの4番目の画像に戻ることができる。
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
 ### [](/userscript/)
 
 ## 🔖 bookmarklet
