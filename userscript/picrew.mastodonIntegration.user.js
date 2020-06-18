@@ -19,9 +19,7 @@
     };
 
     injectionShareButton();
-    document
-        .getElementById("share_btn_mastodon")
-        .addEventListener("click", share, false);
+    document.getElementById("share_btn_mastodon").addEventListener("click", share, false);
 
     function injectionShareButton() {
         const shareWrapper = document.querySelector(".pc_complete_share_sns");

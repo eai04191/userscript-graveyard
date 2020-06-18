@@ -13,8 +13,6 @@
             .querySelector(".preview-container")
             .getAttribute("data-product-permalink");
         const html = `<a class="show-product-page-button js-show-product-page-trigger" href="https://gumroad.com/l/${permalink}" target="_blank"><i class="gi gi-external"></i></a>`;
-        product
-            .querySelector(".product-information")
-            .insertAdjacentHTML("afterbegin", html);
+        product.querySelector(".product-information").insertAdjacentHTML("afterbegin", html);
     });
 })();

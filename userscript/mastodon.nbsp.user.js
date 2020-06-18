@@ -16,10 +16,7 @@ window.addEventListener(
             const textarea = document.querySelector("textarea");
             const zwnbs = "﻿";
             textarea.value = textarea.value.replace(/ /g, zwnbs);
-            textarea.value = textarea.value.replace(
-                new RegExp(zwnbs + "+"),
-                zwnbs
-            );
+            textarea.value = textarea.value.replace(new RegExp(zwnbs + "+"), zwnbs);
             return true;
         }
 

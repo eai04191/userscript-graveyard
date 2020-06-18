@@ -13,9 +13,7 @@
 
     const login_code = document.getElementById("code").value;
 
-    const accts = document
-        .querySelector(".card-body")
-        .innerText.match(/@.+?@.+? /g);
+    const accts = document.querySelector(".card-body").innerText.match(/@.+?@.+? /g);
     const login_instance = accts[0].trim().match(/[^@]*$/);
 
     const button = document.getElementById("btn_next");

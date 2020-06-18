@@ -40,9 +40,7 @@
     }
 
     if (location.pathname === "/index.html") {
-        document.querySelector("input[name='acct']").value = GM_getValue(
-            "acct"
-        );
+        document.querySelector("input[name='acct']").value = GM_getValue("acct");
         setInterval(waitForRecaptcha, 1500);
     } else if (location.pathname === "/reserve.html") {
         post(document.querySelector("#code").value);

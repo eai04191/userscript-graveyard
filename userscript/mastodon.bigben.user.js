@@ -18,9 +18,7 @@ window.addEventListener(
     function() {
         class BigBen {
             constructor() {
-                this.mutationObserver = new MutationObserver(mutations =>
-                    this.onUpdate(mutations)
-                );
+                this.mutationObserver = new MutationObserver(mutations => this.onUpdate(mutations));
             }
 
             start() {
@@ -40,11 +38,9 @@ window.addEventListener(
                 if (mutation.addedNodes.length != 0) {
                     const node = mutation.addedNodes["0"];
                     const status = node.querySelector(".status");
-                    const url = status.querySelector(".status__display-name")
-                        .href;
+                    const url = status.querySelector(".status__display-name").href;
                     if (url === "https://mastodon.org.uk/@bigben") {
-                        const count =
-                            status.textContent.split("BONG").length - 1;
+                        const count = status.textContent.split("BONG").length - 1;
                         this.bong(count);
                     }
                 }
@@ -67,8 +63,7 @@ window.addEventListener(
 
             play(source) {
                 var volume = 0.5;
-                const settings =
-                    JSON.parse(localStorage.getItem("mizle.bigben")) || {};
+                const settings = JSON.parse(localStorage.getItem("mizle.bigben")) || {};
                 if ("volume" in settings) {
                     volume = settings.volume;
                 }

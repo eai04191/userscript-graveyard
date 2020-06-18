@@ -18,9 +18,7 @@ window.addEventListener(
     function() {
         class Xfiles {
             constructor() {
-                this.mutationObserver = new MutationObserver(mutations =>
-                    this.onUpdate(mutations)
-                );
+                this.mutationObserver = new MutationObserver(mutations => this.onUpdate(mutations));
             }
 
             start() {
@@ -58,10 +56,7 @@ window.addEventListener(
 
             play() {
                 var volume = 0.5;
-                const settings =
-                    JSON.parse(
-                        localStorage.getItem("mizle.net_x-files theme")
-                    ) || {};
+                const settings = JSON.parse(localStorage.getItem("mizle.net_x-files theme")) || {};
                 if ("volume" in settings) {
                     volume = settings.volume;
                 }

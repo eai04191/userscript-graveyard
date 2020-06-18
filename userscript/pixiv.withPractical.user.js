@@ -45,11 +45,7 @@
     }
 
     function initializeRecommendZone() {
-        if (
-            $(
-                `.gtm-illust-recommend-zone:not(.${prefix}-recommend-zone-patched)`
-            )
-        ) {
+        if ($(`.gtm-illust-recommend-zone:not(.${prefix}-recommend-zone-patched)`)) {
             const zone = $(".gtm-illust-recommend-zone");
 
             // スタイルの設定
@@ -58,10 +54,7 @@
 
             zone.previousElementSibling.style.float = "left";
             zone.style.clear = "left";
-            zone.previousElementSibling.insertAdjacentElement(
-                "afterend",
-                createOptionUiElement()
-            );
+            zone.previousElementSibling.insertAdjacentElement("afterend", createOptionUiElement());
 
             zone.classList.add(`${prefix}-recommend-zone-patched`);
         }
@@ -71,28 +64,19 @@
         if ($(".gtm-illust-recommend-zone li img")) {
             const items = document
                 .querySelector(".gtm-illust-recommend-zone")
-                .querySelectorAll(
-                    `li:not(.${prefix}-recommend-zone-item-pathed)`
-                );
+                .querySelectorAll(`li:not(.${prefix}-recommend-zone-item-pathed)`);
 
             unsetSizeStyles(items);
 
             for (const item of items) {
-                const img = item.querySelector(
-                    "img[src^='https://i.pximg.net/c/']"
-                );
+                const img = item.querySelector("img[src^='https://i.pximg.net/c/']");
 
                 const pageIcon = item.querySelector("svg[viewBox='0 0 9 10']");
-                const pageCount = pageIcon
-                    ? parseInt(pageIcon.nextSibling.innerText)
-                    : 1;
+                const pageCount = pageIcon ? parseInt(pageIcon.nextSibling.innerText) : 1;
 
                 if (img) {
                     // 大きいURLに置換
-                    img.setAttribute(
-                        "src",
-                        getMasterUrl(img.getAttribute("src"))
-                    );
+                    img.setAttribute("src", getMasterUrl(img.getAttribute("src")));
                     img.style.width = "100%";
                     img.style.height = "100%";
                     // TODO: カラムの大きさに応じていい感じのmax-heightを決めたい
@@ -108,10 +92,7 @@
                             const pageStatus = document.createElement("span");
                             pageStatus.classList.add(`${prefix}-page-status`);
                             pageStatus.innerText = `1 /`;
-                            pageIcon.insertAdjacentElement(
-                                "beforebegin",
-                                pageStatus
-                            );
+                            pageIcon.insertAdjacentElement("beforebegin", pageStatus);
                             pageIcon.style.order = "0";
                             pageStatus.style.order = "1";
                             pageIcon.nextElementSibling.style.order = "2";
@@ -121,12 +102,10 @@
                         item.addEventListener("mousemove", ev => {
                             const rect = ev.target.getBoundingClientRect();
                             const width = rect.width;
-                            const height = rect.height;
+                            // const height = rect.height;
                             const x = ev.clientX - Math.floor(rect.left) || 1;
-                            const y = ev.clientY - Math.floor(rect.top) || 1;
-                            const pagePosition = Math.ceil(
-                                x / (width / pageCount)
-                            );
+                            // const y = ev.clientY - Math.floor(rect.top) || 1;
+                            const pagePosition = Math.ceil(x / (width / pageCount));
                             // console.log(width, height, pageCount);
                             // console.log(x, y, pagePosition);
 
@@ -135,10 +114,7 @@
                                 "src",
                                 img
                                     .getAttribute("src")
-                                    .replace(
-                                        /p(\d+)(_master\d+\....)$/,
-                                        `p${pagePosition - 1}$2`
-                                    )
+                                    .replace(/p(\d+)(_master\d+\....)$/, `p${pagePosition - 1}$2`)
                             );
 
                             updatePageStatus(item, pagePosition);
@@ -148,9 +124,7 @@
                         item.addEventListener("mouseleave", () => {
                             img.setAttribute(
                                 "src",
-                                img
-                                    .getAttribute("src")
-                                    .replace(/p(\d+)(_master\d+\....)$/, `p0$2`)
+                                img.getAttribute("src").replace(/p(\d+)(_master\d+\....)$/, `p0$2`)
                             );
 
                             updatePageStatus(item, 1);
@@ -158,17 +132,13 @@
                     }
                 }
 
-                const ugoiraIcon = item.querySelector(
-                    "img[src^='https://i.pximg.net/']+svg"
-                );
+                const ugoiraIcon = item.querySelector("img[src^='https://i.pximg.net/']+svg");
                 if (ugoiraIcon) {
                     ugoiraIcon.style.display = "none";
                     // TODO: なんとかしてうごイラを動かす
                 }
 
-                const userImg = item.querySelector(
-                    "a[href^='/member.php?id='] img"
-                );
+                const userImg = item.querySelector("a[href^='/member.php?id='] img");
                 if (userImg) {
                     userImg.style.width = "1em";
                     userImg.style.height = "1em";
@@ -211,10 +181,7 @@
         `;
 
         element.addEventListener("input", () => {
-            rangeChanged(
-                element.querySelector("input"),
-                element.querySelector("output")
-            );
+            rangeChanged(element.querySelector("input"), element.querySelector("output"));
         });
 
         return element;

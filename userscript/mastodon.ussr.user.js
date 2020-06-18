@@ -19,9 +19,7 @@ window.addEventListener(
     function() {
         class USSR {
             constructor() {
-                this.mutationObserver = new MutationObserver(mutations =>
-                    this.onUpdate(mutations)
-                );
+                this.mutationObserver = new MutationObserver(mutations => this.onUpdate(mutations));
             }
 
             start() {
@@ -43,15 +41,10 @@ window.addEventListener(
                     const lyric =
                         ":Soyuz_nerushimy_respublik_svobodnykh_Splotila_naveki_velikaya_Rus_Da_zdravstvuyet_sozdanny_voley_narodov_Yediny_moguchy_Sovetsky_Soyuz:";
 
-                    if (
-                        node.textContent.includes(lyric) ||
-                        node.textContent.includes("☭")
-                    ) {
+                    if (node.textContent.includes(lyric) || node.textContent.includes("☭")) {
                         this.play();
                     } else {
-                        node.querySelectorAll(
-                            ".status__content img.emojione"
-                        ).forEach(emoji => {
+                        node.querySelectorAll(".status__content img.emojione").forEach(emoji => {
                             if (emoji.alt === lyric) {
                                 this.play();
                             }

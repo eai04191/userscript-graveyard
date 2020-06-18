@@ -15,22 +15,15 @@
 
     function addHonto() {
         try {
-            const shopList = document.querySelector(
-                ".sidebar__group .group__shop-list"
-            );
+            const shopList = document.querySelector(".sidebar__group .group__shop-list");
             if (!shopList.querySelector(".shop-list__item--honto")) {
                 const hontoLogo = "https://i.imgur.com/JHnb8iJ.png";
 
-                let title = document
-                    .querySelector("meta[name='keywords']")
-                    .content.split(",")[0];
+                let title = document.querySelector("meta[name='keywords']").content.split(",")[0];
                 title = title.replace(/巻$/, "");
 
                 const hontoShop = document.createElement("li");
-                hontoShop.classList.add(
-                    "shop-list__item",
-                    "shop-list__item--honto"
-                );
+                hontoShop.classList.add("shop-list__item", "shop-list__item--honto");
 
                 const hontoLink = document.createElement("a");
                 hontoLink.setAttribute("target", "_blank");
@@ -54,9 +47,7 @@
                         height: auto;
                     }
                 </style>`;
-                document
-                    .querySelector("head")
-                    .insertAdjacentElement("beforeend", style);
+                document.querySelector("head").insertAdjacentElement("beforeend", style);
             }
         } catch (error) {
             // console.log(error);

@@ -18,13 +18,10 @@
 
     const postId = document
         .querySelector('link[rel="canonical"]')
-        .href.match(/https:\/\/fantia\.jp\/posts\/(?<postId>\d+)/u).groups
-        .postId;
+        .href.match(/https:\/\/fantia\.jp\/posts\/(?<postId>\d+)/u).groups.postId;
 
     const observer = new MutationObserver(() => {
-        const gallery = document.querySelector(
-            `.type-photo-gallery:not(.${archviedFlag})`
-        );
+        const gallery = document.querySelector(`.type-photo-gallery:not(.${archviedFlag})`);
         // 処理していないギャラリーがないなら終わる
         if (!gallery) {
             return;
@@ -43,18 +40,10 @@
                 </div>
             </div>`;
         post.querySelector(".post-content-reactions").style.float = "left";
-        post.querySelector(".post-content-reactions").style.width =
-            "calc(100% - 100px)";
-        post.querySelector(".post-content-reactions").insertAdjacentHTML(
-            "afterend",
-            html
-        );
+        post.querySelector(".post-content-reactions").style.width = "calc(100% - 100px)";
+        post.querySelector(".post-content-reactions").insertAdjacentHTML("afterend", html);
         post.querySelector(".post-content-comments").style.clear = "both";
-        post.querySelector(".archive-downloader-button").addEventListener(
-            "click",
-            download,
-            false
-        );
+        post.querySelector(".archive-downloader-button").addEventListener("click", download, false);
         post.querySelector(".archive-downloader-button .count").innerText = `${
             post.querySelectorAll(".type-photo-gallery img").length
         } files`;
@@ -98,9 +87,7 @@
 
                 zip.generateAsync({ type: "blob" }).then(blob => {
                     const blobUrl = URL.createObjectURL(blob);
-                    const title = `${postId}_${
-                        document.querySelector("h1.post-title").innerText
-                    }`;
+                    const title = `${postId}_${document.querySelector("h1.post-title").innerText}`;
                     downloadBlobUrl(blobUrl, title);
                     butttonChangeState("done", button);
                 });
@@ -129,34 +116,29 @@
     // htmlを取得・パースしてフル画像のURLを取得する
     function getFullImageUrls(postId, imageIds) {
         const fullPageUrls = imageIds.map(
-            imageId =>
-                `https://fantia.jp/posts/${postId}/post_content_photo/${imageId}`
+            imageId => `https://fantia.jp/posts/${postId}/post_content_photo/${imageId}`
         );
-        return Promise.all(fullPageUrls.map(url => axios.get(url))).then(
-            responses => {
-                const allResponse = [];
-                responses.forEach(response => {
-                    const doc = document
-                        .createRange()
-                        .createContextualFragment(response.data);
-                    allResponse.push(doc.querySelector("img").src);
-                });
-                return Promise.resolve(allResponse);
-            }
-        );
+        return Promise.all(fullPageUrls.map(url => axios.get(url))).then(responses => {
+            const allResponse = [];
+            responses.forEach(response => {
+                const doc = document.createRange().createContextualFragment(response.data);
+                allResponse.push(doc.querySelector("img").src);
+            });
+            return Promise.resolve(allResponse);
+        });
     }
 
     // 画像urlの配列を受け取ってaxiosでblobを取得する
     // 返り値はblobのarrayではなく、axiosのresponseのarray
     function getBlobs(urls) {
-        return Promise.all(
-            urls.map(url => axios.get(url, { responseType: "blob" }))
-        ).then(responses => {
-            const allResponse = [];
-            responses.forEach(response => {
-                allResponse.push(response);
-            });
-            return Promise.resolve(allResponse);
-        });
+        return Promise.all(urls.map(url => axios.get(url, { responseType: "blob" }))).then(
+            responses => {
+                const allResponse = [];
+                responses.forEach(response => {
+                    allResponse.push(response);
+                });
+                return Promise.resolve(allResponse);
+            }
+        );
     }
 })();

@@ -58,8 +58,7 @@ window.addEventListener(
 
         // REF: https://github.com/facebook/react/issues/10135#issuecomment-401496776
         function setNativeValue(element, value) {
-            const { set: valueSetter } =
-                Object.getOwnPropertyDescriptor(element, "value") || {};
+            const { set: valueSetter } = Object.getOwnPropertyDescriptor(element, "value") || {};
             const prototype = Object.getPrototypeOf(element);
             const { set: prototypeValueSetter } =
                 Object.getOwnPropertyDescriptor(prototype, "value") || {};
@@ -69,9 +68,7 @@ window.addEventListener(
             } else if (valueSetter) {
                 valueSetter.call(element, value);
             } else {
-                throw new Error(
-                    "The given element does not have a value setter"
-                );
+                throw new Error("The given element does not have a value setter");
             }
         }
     },

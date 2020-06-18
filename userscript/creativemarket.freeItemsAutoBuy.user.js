@@ -12,12 +12,8 @@
 (function() {
     "use strict";
 
-    const isLoggedin = !document.querySelector(
-        "#user-menus a[href='/sign-in']"
-    );
-    const buttons = document.querySelectorAll(
-        "[data-owned=''] [id^='btn-free-good-']"
-    );
+    const isLoggedin = !document.querySelector("#user-menus a[href='/sign-in']");
+    const buttons = document.querySelectorAll("[data-owned=''] [id^='btn-free-good-']");
 
     if (isLoggedin && buttons.length != 0) {
         for (const button of buttons) {

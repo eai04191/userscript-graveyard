@@ -13,22 +13,16 @@
     "use strict";
 
     const getTweetInstance = () => {
-        for (const property in document.querySelector(
-            "[aria-expanded='true']"
-        )) {
+        for (const property in document.querySelector("[aria-expanded='true']")) {
             if (property.startsWith("__reactInternalInstance")) {
-                const obj = document.querySelector("[aria-expanded='true']")[
-                    property
-                ];
+                const obj = document.querySelector("[aria-expanded='true']")[property];
                 return obj;
             }
         }
     };
 
     const getTweetElement = () => {
-        return getTweetInstance().stateNode.querySelector(
-            "section div div div"
-        );
+        return getTweetInstance().stateNode.querySelector("section div div div");
     };
 
     const getTweetObj = () => {
@@ -48,9 +42,7 @@
                 .closest(`div:not([class])`).previousSibling;
             beforeTweet.querySelector(`a[href$="/photo/4"]`).click();
         } else {
-            document
-                .querySelectorAll(`[role="button"] [style*="9999px"]`)[0]
-                .click();
+            document.querySelectorAll(`[role="button"] [style*="9999px"]`)[0].click();
         }
     });
 
@@ -69,9 +61,7 @@
                 .closest(`div:not([class])`).nextSibling.nextSibling;
             nextTweet.querySelector(`a[href$="/photo/1"]`).click();
         } else {
-            const arrows = document.querySelectorAll(
-                `[role="button"] [style*="9999px"]`
-            );
+            const arrows = document.querySelectorAll(`[role="button"] [style*="9999px"]`);
             arrows[1] ? arrows[1].click() : arrows[0].click();
         }
     });

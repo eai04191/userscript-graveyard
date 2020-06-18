@@ -14,9 +14,7 @@
     const hideTags = ["三次元", "3次元"];
 
     document
-        .querySelectorAll(
-            ".badge[href^='https://shikorism.net/search/checkin?q=']"
-        )
+        .querySelectorAll(".badge[href^='https://shikorism.net/search/checkin?q=']")
         .forEach(tag => {
             const text = tag.innerText.trim();
             if (hideTags.includes(text)) {

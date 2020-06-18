@@ -22,13 +22,10 @@
 
                 start() {
                     console.log("observe start");
-                    this.mutationObserver.observe(
-                        document.getElementById("app-mount"),
-                        {
-                            childList: true,
-                            subtree: true,
-                        }
-                    );
+                    this.mutationObserver.observe(document.getElementById("app-mount"), {
+                        childList: true,
+                        subtree: true,
+                    });
                 }
 
                 onUpdate(mutations) {
@@ -46,16 +43,10 @@
                                 // dlButton.style.position = "absolute";
                                 dlButton.style.fontSize = "125%";
                                 // dlButton.style.bottom = 0;
-                                dlButton.setAttribute(
-                                    "download",
-                                    "download.png"
-                                );
+                                dlButton.setAttribute("download", "download.png");
                                 dlButton.setAttribute("href", imageUrl);
                                 dlButton.textContent = "💾 Mate";
-                                a.parentNode.insertBefore(
-                                    dlButton,
-                                    a.nextSibling
-                                );
+                                a.parentNode.insertBefore(dlButton, a.nextSibling);
                             }
                         });
                     }

@@ -35,13 +35,8 @@
             if (!nodes[0].querySelector(".externalLink")) {
                 nodes.forEach(function(node) {
                     node.style.display = "flex";
-                    const originalUrl = node.parentNode.previousSibling.getAttribute(
-                        "href"
-                    );
-                    const externalUrl = originalUrl.replace(
-                        "mode=medium",
-                        "mode=manga"
-                    );
+                    const originalUrl = node.parentNode.previousSibling.getAttribute("href");
+                    const externalUrl = originalUrl.replace("mode=medium", "mode=manga");
 
                     const externalLink = document.createElement("a");
                     externalLink.setAttribute("href", externalUrl);

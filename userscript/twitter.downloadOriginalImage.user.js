@@ -54,28 +54,18 @@
         const o = new URL(url);
 
         const originalUrl =
-            o.origin +
-            o.pathname +
-            "?format=" +
-            o.searchParams.get("format") +
-            "&name=orig";
+            o.origin + o.pathname + "?format=" + o.searchParams.get("format") + "&name=orig";
 
         return originalUrl;
     }
 
     function getImageList(state) {
         if (state === "IMAGE_MODAL") {
-            return [
-                document.querySelector(
-                    "img[src^='https://pbs.twimg.com/media']"
-                ),
-            ];
+            return [document.querySelector("img[src^='https://pbs.twimg.com/media']")];
         }
 
         if (state === "TWEET_DETAILED") {
-            return document.querySelectorAll(
-                "article img[src^='https://pbs.twimg.com/media']"
-            );
+            return document.querySelectorAll("article img[src^='https://pbs.twimg.com/media']");
         }
     }
 
