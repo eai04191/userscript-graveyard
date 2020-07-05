@@ -1,0 +1,125 @@
+/* ==UserStyle==
+@name           refined pixiv
+@namespace      mizle.net
+@version        0.0.0
+@description    a
+@author         Eai
+@license        MIT
+@preprocessor   stylus
+==/UserStyle== */
+@-moz-document url-prefix("https://www.pixiv.net/artworks/") {
+    /* 右サイドバー */
+    aside:first-of-type {
+        > section {
+            background: white;
+            margin-bottom: 1rem;
+        }
+
+        /* フォローボタン */
+        button[data-click-label="follow"] {
+            border: 1px solid rgba(0, 0, 0, .225);
+        }
+
+        /* fanbox */
+        .sc-1u16qqh-7 {
+            padding: 0;
+            p:first-of-type {
+                display: none;
+            }
+
+            > div {
+                margin: unset;
+                padding: 16px;
+                box-sizing: border-box;
+            }
+
+            /* ヘッダーがないときのタイトルの入ってるdiv */
+            > div.fWpLvX {
+                padding-bottom: 12px;
+            }
+
+            > div:first-of-type + div {
+                padding-top: 0;
+            }
+
+            /* 支援するボタン（ヘッダーあり、なし） */
+            > a > div > div:last-of-type,
+            > div > div > a[href*="fanbox"] {
+                display: none
+            }
+
+            /* fanboxタイトル（ヘッダーあり、なし） */
+            > a > div > div:first-of-type,
+            > div > div > div > a[href*="fanbox"] > div {
+                flex-direction: row;
+                align-items: center;
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 1em;
+                    height: 1em;
+                    background: center / contain no-repeat url("https://s.pximg.net/common/images/fanbox/favicon.ico");
+                    border-radius: 2px;
+                    margin-right: 4px;
+                }
+            }
+
+            > a > div > div:first-of-type {
+                margin-left: 16px;
+            }
+
+            > div > div > div > a[href*="fanbox"] > div {
+                font-size: 12px;
+                line-height: calc(1em + 4px);
+            }
+        }
+
+
+        /* boothへのリンクタイトル */
+        a[href*="booth.pm/?"] {
+            font-size: 0;
+            &::before {
+                content: '';
+                display: inline-block;
+                font-size: 12px;
+                width: 1em;
+                height: 1em;
+                background: center / contain no-repeat url("https://asset.booth.pm/favicon.ico");
+                border-radius: 2px;
+                margin-top: 2px
+            }
+        }
+
+        /* booth名（非リンク） */
+        .alwh9r-2 {
+            margin-top: calc( -1 * (1em + 4px + 1.5px + 2px));
+            margin-left: calc(1em + 4px);
+            line-height: calc(1em + 4px);
+        }
+
+        /* booth作品 */
+        .alwh9r-3 {
+            margin-top: 12px;
+            li:first-of-type {
+                padding-top: unset
+            }
+
+            > li:last-of-type {
+                padding-bottom: unset;
+                border-bottom: none;
+            }
+        }
+    }
+
+    /* ハンバーガーメニュー */
+    .evAThO {}
+
+    .ljeOJE {
+        color: #5f6368;
+    }
+
+    .wcsTA {
+        font-weight: 500;
+        color: #5f6368
+    }
+}
