@@ -1,0 +1,27 @@
+/* ==UserStyle==
+@name           steamcommunity.com bit collection preview
+@namespace      mizle.net
+@version        1.0.0
+@description    コレクションの画像拡大するやつ
+@author         Eai
+@license        MIT
+@preprocessor   stylus
+==/UserStyle== */
+@-moz-document url-prefix("https://steamcommunity.com/sharedfiles/filedetails/?id=") {
+    #mainContentsCollection {
+        .collectionItem .workshopItem {
+            height: auto;
+            min-height: unset;
+            width: 200px;
+        }
+
+        .collectionItem .workshopItemPreviewHolder {
+            height: auto;
+        }
+
+        .collectionItem .workshopItemPreviewImage {
+            width: 200px;
+            object-fit: cover;
+        }
+    }
+}

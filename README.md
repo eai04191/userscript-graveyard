@@ -114,6 +114,13 @@ Googleの検索結果に出てくる歌詞を選択可能にする。
 
 ![](https://placehold.jp/ffffff/ffffff/1000x1.png)
 
+### [steamcommunity.bigCollectionPreview.user.styl](/userstyle/steamcommunity.bigCollectionPreview.user.styl)
+<img src="https://i.imgur.com/5mtzeBo.jpg" align="right" width="50%">
+
+Steamのコレクションの画像を拡大する
+
+![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+
 ### [](/userstyle/)
 
 
