@@ -5,6 +5,7 @@
 www.youtube.com##ytd-rich-item-renderer:-abp-has(.ytd-thumbnail-overlay-time-status-renderer[aria-label*=' 分'])
 www.youtube.com##ytd-rich-item-renderer:-abp-has(.ytd-thumbnail-overlay-time-status-renderer[aria-label*=' 時間'])
 www.youtube.com##ytd-rich-item-renderer:-abp-has(.badge-style-type-live-now)
+www.youtube.com##ytd-rich-item-renderer:-abp-has(.ytd-toggle-button-renderer)
 www.youtube.com##ytd-compact-video-renderer:-abp-has(.ytd-thumbnail-overlay-time-status-renderer[aria-label*=' 分'])
 www.youtube.com##ytd-compact-video-renderer:-abp-has(.ytd-thumbnail-overlay-time-status-renderer[aria-label*=' 時間'])
 www.youtube.com##ytd-compact-video-renderer:-abp-has(.badge-style-type-live-now)
