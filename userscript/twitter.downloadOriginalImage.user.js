@@ -2,7 +2,7 @@
 // @name         Twitter オリジナル画像ダウンロード
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.0.0
+// @version      1.0.1
 // @match        https://twitter.com/*
 // @require      https://cdn.jsdelivr.net/npm/@violentmonkey/shortcut@1
 // @grant        GM_download
@@ -65,7 +65,10 @@
         }
 
         if (state === "TWEET_DETAILED") {
-            return document.querySelectorAll("article img[src^='https://pbs.twimg.com/media']");
+            const id = document.location.href.match(/status\/(?<id>\d+)/).groups.id;
+            return document.querySelectorAll(
+                `article a[href*='${id}'] img[src^='https://pbs.twimg.com/media']`
+            );
         }
     }
 
