@@ -2,7 +2,7 @@
 // @name         Fantia Archive Downloader
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.2.0
+// @version      1.2.1
 // @match        https://fantia.jp/posts/*
 // @match        https://fantia.jp/fanclubs/*/backnumbers?*
 // @require      https://raw.githubusercontent.com/mitchellmebane/GM_fetch/master/GM_fetch.js
@@ -98,7 +98,11 @@
                 ).groups.imageId
         );
         const fullImageUrls = await getFullImageUrls(postId, imageIds);
-        const filenames = fullImageUrls.map(url => new URL(url).pathname.split("/").pop());
+        const filenames = fullImageUrls.map((url, i) => {
+            const filename = new URL(url).pathname.split("/").pop();
+            const index = ("00" + (i + 1)).slice(-2);
+            return `${index}_${filename}`;
+        });
         const blobs = await getBlobs(fullImageUrls);
         const files = filenames.map((x, i) => ({ filename: x, blob: blobs[i] }));
         console.timeEnd("fetching urls");
