@@ -2,19 +2,20 @@
 // @name         Fantia Archive Downloader
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.0.0
+// @version      1.1.0
 // @match        https://fantia.jp/posts/*
-// @require      https://unpkg.com/axios/dist/axios.min.js
+// @require      https://raw.githubusercontent.com/mitchellmebane/GM_fetch/master/GM_fetch.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jszip/3.2.2/jszip.min.js
+// @grant        GM_xmlhttpRequest
 // ==/UserScript==
-
-/*global axios*/
+/*global GM_fetch*/
 /*global JSZip*/
 
 (function() {
     "use strict";
 
     const archviedFlag = "archived";
+    const compressLevel = 2;
 
     const postId = document
         .querySelector('link[rel="canonical"]')
@@ -56,13 +57,20 @@
         subtree: true,
     });
 
-    function download(event) {
+    async function download(event) {
+        const postTitle = document.querySelector("h1.post-title").innerText;
+        const postContentTitle = event.srcElement.closest(".post-content-body")
+            .previousElementSibling.innerText;
+
+        // ボタンの状態を変える
         const button = event.srcElement.closest(".archive-downloader-button");
         butttonChangeState("processing", button);
+
+        // 画像のURLを収集する
+        console.time("fetching urls");
         const gallery = event.srcElement
             .closest("post-content")
             .querySelector(".type-photo-gallery");
-
         const thambnails = gallery.querySelectorAll(".image-module img");
         const imageIds = [...thambnails].map(
             img =>
@@ -70,29 +78,35 @@
                     /https:\/\/cc\.fantia\.jp\/uploads\/post_content_photo\/file\/(?<imageId>\d+)\//
                 ).groups.imageId
         );
+        const fullImageUrls = await getFullImageUrls(postId, imageIds);
+        const filenames = fullImageUrls.map(url => new URL(url).pathname.split("/").pop());
+        const blobs = await getBlobs(fullImageUrls);
+        const files = filenames.map((x, i) => ({ filename: x, blob: blobs[i] }));
+        console.timeEnd("fetching urls");
 
-        getFullImageUrls(postId, imageIds).then(fullImageUrls => {
-            getBlobs(fullImageUrls).then(blobs => {
-                const zip = new JSZip();
-                blobs.forEach((response, index) => {
-                    const fileType = response.data.type
-                        .match(/image\/(?<type>.+)/)
-                        .groups.type.replace("jpeg", "jpg");
-                    const filename = `${imageIds[index]}.${fileType}`;
-                    zip.file(filename, response.data, {
-                        binary: true,
-                    });
-                    console.log(`${filename} added.`);
-                });
+        const zip = new JSZip();
 
-                zip.generateAsync({ type: "blob" }).then(blob => {
-                    const blobUrl = URL.createObjectURL(blob);
-                    const title = `${postId}_${document.querySelector("h1.post-title").innerText}`;
-                    downloadBlobUrl(blobUrl, title);
-                    butttonChangeState("done", button);
-                });
-            });
+        // 詰める
+        files.forEach(file => {
+            const { filename, blob } = file;
+            zip.file(filename, blob, { binary: true });
+            console.log(`${filename} added to zip.`);
         });
+
+        // zipを作成する
+        console.time("generate zip");
+        const zipped = await zip.generateAsync({
+            type: "blob",
+            compression: "DEFLATE",
+            compressionOptions: {
+                level: compressLevel,
+            },
+        });
+        console.timeEnd("generate zip");
+
+        // zipをブラウザでダウンロードする
+        downloadBlobUrl(URL.createObjectURL(zipped), `${postId}_${postTitle}_${postContentTitle}`);
+        butttonChangeState("done", button);
     }
 
     function butttonChangeState(state, buttonElement) {
@@ -118,27 +132,20 @@
         const fullPageUrls = imageIds.map(
             imageId => `https://fantia.jp/posts/${postId}/post_content_photo/${imageId}`
         );
-        return Promise.all(fullPageUrls.map(url => axios.get(url))).then(responses => {
-            const allResponse = [];
-            responses.forEach(response => {
-                const doc = document.createRange().createContextualFragment(response.data);
-                allResponse.push(doc.querySelector("img").src);
-            });
-            return Promise.resolve(allResponse);
-        });
+        return Promise.all(
+            fullPageUrls.map(async url => {
+                const response = await GM_fetch(url);
+                const html = await response.text();
+                const doc = document.createRange().createContextualFragment(html);
+                const src = doc.querySelector("img").src;
+                return src;
+            })
+        );
     }
 
-    // 画像urlの配列を受け取ってaxiosでblobを取得する
-    // 返り値はblobのarrayではなく、axiosのresponseのarray
+    // 画像urlの配列を受け取ってGM_fetchでblobを取得する
+    // 返り値はblobのarray
     function getBlobs(urls) {
-        return Promise.all(urls.map(url => axios.get(url, { responseType: "blob" }))).then(
-            responses => {
-                const allResponse = [];
-                responses.forEach(response => {
-                    allResponse.push(response);
-                });
-                return Promise.resolve(allResponse);
-            }
-        );
+        return Promise.all(urls.map(url => GM_fetch(url).then(r => r.blob())));
     }
 })();
