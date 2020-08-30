@@ -2,9 +2,9 @@
 // @name         Fantia Archive Downloader
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.2.1
+// @version      1.2.2
 // @match        https://fantia.jp/posts/*
-// @match        https://fantia.jp/fanclubs/*/backnumbers?*
+// @match        https://fantia.jp/fanclubs/*/backnumbers*
 // @require      https://raw.githubusercontent.com/mitchellmebane/GM_fetch/master/GM_fetch.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jszip/3.2.2/jszip.min.js
 // @grant        GM_xmlhttpRequest
