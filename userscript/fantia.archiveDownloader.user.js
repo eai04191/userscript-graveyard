@@ -2,13 +2,16 @@
 // @name         Fantia Archive Downloader
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.1.0
+// @version      1.1.1
 // @match        https://fantia.jp/posts/*
 // @require      https://raw.githubusercontent.com/mitchellmebane/GM_fetch/master/GM_fetch.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jszip/3.2.2/jszip.min.js
 // @grant        GM_xmlhttpRequest
+// @grant        GM_download
 // ==/UserScript==
 /*global GM_fetch*/
+/*global GM_xmlhttpRequest*/
+/*global GM_download*/
 /*global JSZip*/
 
 (function() {
@@ -105,7 +108,7 @@
         console.timeEnd("generate zip");
 
         // zipをブラウザでダウンロードする
-        downloadBlobUrl(URL.createObjectURL(zipped), `${postId}_${postTitle}_${postContentTitle}`);
+        GM_download(URL.createObjectURL(zipped), `${postId}_${postTitle}_${postContentTitle}`);
         butttonChangeState("done", button);
     }
 
@@ -118,13 +121,6 @@
         } else {
             icon.innerText = "📦";
         }
-    }
-
-    function downloadBlobUrl(blobUrl, filename) {
-        const a = document.createElement("a");
-        a.download = filename;
-        a.href = blobUrl;
-        a.click();
     }
 
     // htmlを取得・パースしてフル画像のURLを取得する
@@ -143,9 +139,27 @@
         );
     }
 
-    // 画像urlの配列を受け取ってGM_fetchでblobを取得する
+    // 画像urlの配列を受け取ってGM_xmlhttpRequestでblobを取得する
     // 返り値はblobのarray
     function getBlobs(urls) {
-        return Promise.all(urls.map(url => GM_fetch(url).then(r => r.blob())));
+        return Promise.all(
+            urls.map(url => {
+                return new Promise((resolve, reject) => {
+                    GM_xmlhttpRequest({
+                        url: url,
+                        method: "GET",
+                        responseType: "blob",
+                        onload: response => {
+                            console.log("GM_xmlhttpRequest", response);
+                            if (response.status === 200) {
+                                resolve(response.response);
+                            } else {
+                                reject(new Error(response.statusText));
+                            }
+                        },
+                    });
+                });
+            })
+        );
     }
 })();
