@@ -2,8 +2,9 @@
 // @name         Fantia Archive Downloader
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.1.1
+// @version      1.2.0
 // @match        https://fantia.jp/posts/*
+// @match        https://fantia.jp/fanclubs/*/backnumbers?*
 // @require      https://raw.githubusercontent.com/mitchellmebane/GM_fetch/master/GM_fetch.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jszip/3.2.2/jszip.min.js
 // @grant        GM_xmlhttpRequest
@@ -20,10 +21,6 @@
     const archviedFlag = "archived";
     const compressLevel = 2;
 
-    const postId = document
-        .querySelector('link[rel="canonical"]')
-        .href.match(/https:\/\/fantia\.jp\/posts\/(?<postId>\d+)/u).groups.postId;
-
     const observer = new MutationObserver(() => {
         const gallery = document.querySelector(`.type-photo-gallery:not(.${archviedFlag})`);
         // 処理していないギャラリーがないなら終わる
@@ -32,9 +29,9 @@
         }
 
         // UIを追加する
-        const post = gallery.closest("post-content");
+        const post = gallery.closest(".post-content");
         const html = `
-            <div class="post-content-reactions" style="width: 100px; float: left;">
+            <div class="post-content-reactions archive-downloader-wrapper">
                 <h3>Download</h3>
                 <div class="reactions clearfix dropup">
                     <button class="btn btn-reaction btn-sm archive-downloader-button" style="padding: 5px 12px;">
@@ -43,10 +40,17 @@
                     </button>
                 </div>
             </div>`;
-        post.querySelector(".post-content-reactions").style.float = "left";
-        post.querySelector(".post-content-reactions").style.width = "calc(100% - 100px)";
-        post.querySelector(".post-content-reactions").insertAdjacentHTML("afterend", html);
-        post.querySelector(".post-content-comments").style.clear = "both";
+        if (isBacknumberPage()) {
+            post.querySelector(".post-content-body").insertAdjacentHTML("afterend", html);
+            post.querySelector(".archive-downloader-wrapper .reactions ").style.marginTop = "1em";
+        } else {
+            post.querySelector(".post-content-reactions").style.float = "left";
+            post.querySelector(".post-content-reactions").style.width = "calc(100% - 100px)";
+            post.querySelector(".post-content-reactions").insertAdjacentHTML("afterend", html);
+            post.querySelector(".archive-downloader-wrapper").style.width = "100px";
+            post.querySelector(".archive-downloader-wrapper").style.float = "left";
+            post.querySelector(".post-content-comments").style.clear = "both";
+        }
         post.querySelector(".archive-downloader-button").addEventListener("click", download, false);
         post.querySelector(".archive-downloader-button .count").innerText = `${
             post.querySelectorAll(".type-photo-gallery img").length
@@ -61,19 +65,31 @@
     });
 
     async function download(event) {
-        const postTitle = document.querySelector("h1.post-title").innerText;
-        const postContentTitle = event.srcElement.closest(".post-content-body")
-            .previousElementSibling.innerText;
+        const el = event.srcElement;
+        const post = el.closest(".post-content");
+
+        const postTitle = isBacknumberPage()
+            ? post.querySelector("a").innerText
+            : document.querySelector("h1.post-title").innerText;
+        const postContentTitle = isBacknumberPage()
+            ? post.querySelector(".post-content-title").innerText
+            : el.closest(".post-content-body").previousElementSibling.innerText;
+        const postId = isBacknumberPage()
+            ? el
+                  .closest(".post-content")
+                  .querySelector("a")
+                  .href.match(/(\d+)/)[0]
+            : document
+                  .querySelector('link[rel="canonical"]')
+                  .href.match(/https:\/\/fantia\.jp\/posts\/(?<postId>\d+)/u).groups.postId;
 
         // ボタンの状態を変える
-        const button = event.srcElement.closest(".archive-downloader-button");
+        const button = el.closest(".archive-downloader-button");
         butttonChangeState("processing", button);
 
         // 画像のURLを収集する
         console.time("fetching urls");
-        const gallery = event.srcElement
-            .closest("post-content")
-            .querySelector(".type-photo-gallery");
+        const gallery = post.querySelector(".type-photo-gallery");
         const thambnails = gallery.querySelectorAll(".image-module img");
         const imageIds = [...thambnails].map(
             img =>
@@ -161,5 +177,9 @@
                 });
             })
         );
+    }
+
+    function isBacknumberPage() {
+        return location.href.includes("backnumbers");
     }
 })();
