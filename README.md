@@ -30,7 +30,7 @@ PR はおそらく受け入れます。
 
 Twitter のボタン（フォローとか）を[ジャバ](https://www.java.com/ja/download/)っぽくする。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [mastodon.omoshiika.user.styl](/userstyle/mastodon.omoshiika.user.styl)
 
@@ -41,7 +41,7 @@ Twitter のボタン（フォローとか）を[ジャバ](https://www.java.com/
 > SNS はアイコンが 10 割なので連合タイムラインはアイコンだけ表示するようにしたら重しイカもしれない
 > https://mstdn.maud.io/users/Eai/statuses/100610017821558791
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [mastodon.gaminghota.user.styl](/userstyle/mastodon.gaminghota.user.styl)
 
@@ -49,7 +49,7 @@ Twitter のボタン（フォローとか）を[ジャバ](https://www.java.com/
 
 https://mstdn.maud.io/users/Eai/statuses/101142623916415083
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [youtube.capture.user.styl](/userstyle/youtube.capture.user.styl)
 
@@ -61,7 +61,7 @@ YouTube でシアターモードで再生中の動画の大きさを 1920x1080 �
 
 1920x1080 で取るためにはそれより大きいディスプレイが必要。画像は 2560x1440。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [tissue.safemode.user.styl](/userstyle/tissue.safemode.user.styl)
 
@@ -71,7 +71,7 @@ YouTube でシアターモードで再生中の動画の大きさを 1920x1080 �
 
 センシティブな要素しかないだろ。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [nijie.fluid.user.styl](/userstyle/nijie.fluid.user.styl)
 
@@ -81,7 +81,7 @@ YouTube でシアターモードで再生中の動画の大きさを 1920x1080 �
 
 めんどくさくてすべての要素の `box-sizing` をいじったので若干崩れる箇所がある。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [notestock.searchcount.user.styl](/userstyle/notestock.searchcount.user.styl)
 
@@ -89,7 +89,7 @@ YouTube でシアターモードで再生中の動画の大きさを 1920x1080 �
 
 notestock の検索結果に見つかった件数を表示するスタイル。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [github.expandItems.user.styl](/userstyle/github.expandItems.user.styl)
 
@@ -97,7 +97,7 @@ notestock の検索結果に見つかった件数を表示するスタイル。
 
 GitHub のタイムラインでたたまれる項目を常に展開するスタイル。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [mastodon.privacyfilter.user.styl](/userstyle/mastodon.privacyfilter.user.styl)
 
@@ -105,7 +105,7 @@ GitHub のタイムラインでたたまれる項目を常に展開するスタ�
 
 Mastodon の WebUI から個人を特定できそうなのを隠すスタイル。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [google.selectableLyrics.user.styl](/userstyle/google.selectableLyrics.user.styl)
 
@@ -113,7 +113,7 @@ Mastodon の WebUI から個人を特定できそうなのを隠すスタイル�
 
 Google の検索結果に出てくる歌詞を選択可能にする。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [steamcommunity.bigCollectionPreview.user.styl](/userstyle/steamcommunity.bigCollectionPreview.user.styl)
 
@@ -121,7 +121,7 @@ Google の検索結果に出てくる歌詞を選択可能にする。
 
 Steam のコレクションの画像を拡大する
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [](/userstyle/)
 
@@ -139,7 +139,7 @@ Steam のコレクションの画像を拡大する
 
 [:don:そぎ by mohemohe · Pull Request #1 · eai04191/userscript-graveyard](https://github.com/eai04191/userscript-graveyard/pull/1)
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [notestock.loginCodeButton.user.js](/userscript/notestock.loginCodeButton.user.js)
 
@@ -161,7 +161,7 @@ pixiv のユーザーのイラスト一覧の画面で、イラストの漫画�
 
 現在はイラストページから漫画が見れるので必要なくなった。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [github.relativeTime.user.js](/userscript/github.relativeTime.user.js)
 
@@ -169,7 +169,7 @@ pixiv のユーザーのイラスト一覧の画面で、イラストの漫画�
 
 GitHub の時間表記`on 30 Jul 2018`などを`2018/7/30 22:41`といった表記に変更する。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [picrew.mastodonIntegration.user.js](/userscript/picrew.mastodonIntegration.user.js)
 
@@ -179,7 +179,7 @@ picrew の完成画面で直接投稿できるボタンを追加する。
 
 使うには 15,16 行目のホストとトークンを書き換える。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [bookmeter.hontoSearch.user.js](/userscript/bookmeter.hontoSearch.user.js)
 
@@ -187,7 +187,7 @@ picrew の完成画面で直接投稿できるボタンを追加する。
 
 読書メーターで本の詳細ページに出てくる「書店で詳細を見る」に honto での検索リンクを追加する。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [hatena.hatenaKeywordRemover.user.js](/userscript/hatena.hatenaKeywordRemover.user.js)
 
@@ -239,7 +239,7 @@ https://stellaria.network/users/Eai/statuses/102163905594645230
 
 [CodePen で前作った](https://codepen.io/eai/full/mGVOLj)けどやはり投稿画面にあったほうが便利なので。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [mouneyou.mastodon.user.js](/userscript/mouneyou.mastodon.user.js)
 
@@ -247,7 +247,7 @@ https://stellaria.network/users/Eai/statuses/102163905594645230
 
 [てゆうかもう寝よう。](http://mouneyou.rgx6.com/)から Mastodon に投稿するボタンを追加する。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 #### 設定項目
 
@@ -276,7 +276,7 @@ Tampermonkey はわからん（ないっぽい）（つまり使えないとい�
 
 画像の詳細かツイートの詳細を開いた状態で D キーを押すと、その時表示している画像の原寸画像を全てダウンロードする。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [tissue.editButton.user.js](/userscript/tissue.editButton.user.js)
 
@@ -290,7 +290,7 @@ Gumroad のライブラリにパーマリンクのアイコンを追加する。
 
 クリックイベントがうまく処理できてないので右クリックしてリンクをコピーするのがベター
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [twitter.betterArrow.user.js](/userscript/twitter.betterArrow.user.js)
 
@@ -302,7 +302,7 @@ Twitter で画像を見ている時に矢印上と矢印下でページ送りが
 
 同様に前にスレッドがある時、1 枚目の画像をを見ているときに矢印上で送ると、前のツイートの 4 番目の画像に戻ることができる。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [notestock.AutoLogin.user.js](/userscript/notestock.AutoLogin.user.js)
 
@@ -318,7 +318,7 @@ notestock で自動でログインしてくれるやつ
 
 Steam ワークショップで RimWorld のアイテムを開いたとき、[RimWorld Mod データベース](https://rimworld.2game.info/)に説明や日本語化ファイルがあるか表示するやつ。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [](/userscript/)
 
@@ -330,7 +330,7 @@ Steam ワークショップで RimWorld のアイテムを開いたとき、[Rim
 
 Mastodon のトゥートページで実行すると埋め込みコードを得ることができる。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ### [](/bookmarklet/)
 
@@ -344,7 +344,7 @@ Violentmonkey の設定画面で 1 スクリプト 1 行で表示する CSS。
 
 Violentmonkey の 設定 -> 高度な設定 -> カスタムスタイル に貼り付けて使用する。
 
-![](https://placehold.jp/ffffff/ffffff/1000x1.png)
+![](./spacer.png)
 
 ## Contributors
 
