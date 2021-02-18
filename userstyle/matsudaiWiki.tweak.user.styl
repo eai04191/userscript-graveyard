@@ -1,19 +1,24 @@
 /* ==UserStyle==
 @name           MatsudaiWiki tweak
 @namespace      mizle.net
-@version        1.0.0
+@version        1.0.1
 @description    いくつかの見た目の変更。他の Wiki.js 2 のサイトにも使えるはず。
 @author         Eai
 @license        MIT
 @preprocessor   stylus
-@var            checkbox reverseTocOrder "目次を左に寄せる"            1
-@var            checkbox addMargin       "コンテンツ左右の余白をいじる" 1
-@var            text     addMarginSize   "👆の余白の量"                1rem
+@var            checkbox reverseTocOrder               "目次を右に寄せる"                       1
+@var            checkbox addMargin                     "コンテンツ左右の余白をいじる"           0
+@var            text     addMarginSize                 "👆の余白の量"                           1rem
+@var            checkbox noFAB                         "右下のボタン消す"                       1
+@var            checkbox smallTocIconPadding           "目次の〉の余白を少し詰める"             1
+@var            checkbox collapsibleSidebar            "サイドバーを折りたたむ（ホバーで展開）" 0
 ==/UserStyle== */
-@-moz-document domain("wiki.akane.blue") {
-    .v-main {
-        if reverseTocOrder {
-            .layout > div:first-of-type {
+@-moz-document url("https://wiki.akane.blue/"),
+url-prefix("https://wiki.akane.blue/ja") {
+
+    if reverseTocOrder {
+        .v-main {
+            .layout:not(.wrap) > div:first-of-type {
                 order: 2
             }
 
@@ -21,14 +26,83 @@
                 margin-left: unset;
             }
         }
+    }
 
-        if addMargin {
-            .layout > div:last-of-type {
-                margin: 0 addMarginSize;
+    if addMargin {
+        .layout:not(.wrap) > div:last-of-type {
+            margin: 0 addMarginSize;
+        }
+
+        .is-page-header {
+            margin-left: addMarginSize;
+        }
+    }
+
+    if noFAB {
+        .v-speed-dial {
+            display: none;
+        }
+    }
+
+    if smallTocIconPadding {
+        .layout:not(.wrap) > div:first-of-type .mdi-chevron-right {
+            padding-right: 0 !important;
+        }
+
+        .layout:not(.wrap) > div:first-of-type .v-list-item__title {
+            padding-left: calc(12px / 2) !important;
+        }
+    }
+
+
+    if collapsibleSidebar {
+        :root {
+            --width: 256px;
+            --collapsed-width: calc(52px + 12px * 2);
+        }
+
+        .v-main__wrap {
+            --gap: calc(var(--width) - var(--collapsed-width));
+            > header,
+            .container:first-of-type {
+                margin-left: calc(var(--gap) * -1);
+                padding-left: var(--gap) !important;
+                max-width: calc(100% + var(--gap));
+                width: calc(100% + var(--gap));
+                & + hr {
+                    margin-left: calc(var(--gap) * -1);
+                    max-width: calc(100% + var(--gap));
+                }
+            }
+        }
+
+        .v-navigation-drawer {
+            --default-transition: .2s cubic-bezier(.4, 0, .2, 1);
+            width: var(--collapsed-width) !important;
+
+            .v-subheader,
+            .v-list-item__title,
+            button:last-of-type {
+                opacity: 0;
+                transition: opacity var(--default-transition);
             }
 
-            .is-page-header {
-                margin-left: addMarginSize;
+            .v-list-item__avatar {
+                margin-left: 8px;
+                transition: margin var(--default-transition);
+            }
+
+            &:hover {
+                width: var(--width) !important;
+                .v-subheader,
+                .v-list-item__title,
+                button:last-of-type {
+                    opacity: 1;
+                }
+
+                .v-list-item__avatar {
+                    margin-left: unset;
+                }
             }
         }
     }
