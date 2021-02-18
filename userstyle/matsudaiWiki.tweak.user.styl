@@ -1,0 +1,35 @@
+/* ==UserStyle==
+@name           MatsudaiWiki tweak
+@namespace      mizle.net
+@version        1.0.0
+@description    いくつかの見た目の変更。他の Wiki.js 2 のサイトにも使えるはず。
+@author         Eai
+@license        MIT
+@preprocessor   stylus
+@var            checkbox reverseTocOrder "目次を左に寄せる"            1
+@var            checkbox addMargin       "コンテンツ左右の余白をいじる" 1
+@var            text     addMarginSize   "👆の余白の量"                1rem
+==/UserStyle== */
+@-moz-document domain("wiki.akane.blue") {
+    .v-main {
+        if reverseTocOrder {
+            .layout > div:first-of-type {
+                order: 2
+            }
+
+            .is-page-header {
+                margin-left: unset;
+            }
+        }
+
+        if addMargin {
+            .layout > div:last-of-type {
+                margin: 0 addMarginSize;
+            }
+
+            .is-page-header {
+                margin-left: addMarginSize;
+            }
+        }
+    }
+}
