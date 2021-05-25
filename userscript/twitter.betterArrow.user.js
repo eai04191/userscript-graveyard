@@ -9,7 +9,7 @@
 
 /*global VM*/
 
-(function() {
+(function () {
     "use strict";
 
     const getTweetInstance = () => {

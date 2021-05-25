@@ -6,9 +6,9 @@
 // @match https://gumroad.com/library*
 // ==/UserScript==
 
-(function() {
+(function () {
     "use strict";
-    document.querySelectorAll(".product-main").forEach(product => {
+    document.querySelectorAll(".product-main").forEach((product) => {
         const permalink = product
             .querySelector(".preview-container")
             .getAttribute("data-product-permalink");

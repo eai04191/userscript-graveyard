@@ -13,7 +13,7 @@
 /*global GM_getValue*/
 /*global grecaptcha*/
 
-(function() {
+(function () {
     "use strict";
     const mastodonClient = axios.create({
         baseURL: `https://${GM_getValue("host")}/api/v1/`,

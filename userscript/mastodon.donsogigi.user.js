@@ -8,7 +8,7 @@
 
 window.addEventListener(
     "load",
-    function() {
+    function () {
         addSogigiButton();
         document.getElementById("sogigi").onclick = eventHandlerSogigi;
 

@@ -8,14 +8,14 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     "use strict";
     window.addEventListener(
         "load",
-        function() {
+        function () {
             class discordImagemate {
                 constructor() {
-                    this.mutationObserver = new MutationObserver(mutations =>
+                    this.mutationObserver = new MutationObserver((mutations) =>
                         this.onUpdate(mutations)
                     );
                 }
@@ -34,7 +34,7 @@
                         "a[class*='imageWrapper-'][href$='.png'], a[class*='imageWrapper-'][href$='.jpg']"
                     );
                     if (imageNodelist != 0) {
-                        imageNodelist.forEach(a => {
+                        imageNodelist.forEach((a) => {
                             if (!a.classList.contains("imageMate-processed")) {
                                 console.log(a);
                                 a.classList.add("imageMate-processed");

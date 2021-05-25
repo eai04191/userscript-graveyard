@@ -8,13 +8,13 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     "use strict";
 
     window.addEventListener("DOMNodeInserted", replaceRelativeTime, false);
 
     function replaceRelativeTime() {
-        document.querySelectorAll("relative-time").forEach(function(element) {
+        document.querySelectorAll("relative-time").forEach(function (element) {
             element.innerText = element.title
                 .replace("JST", "")
                 .replace("日", "")

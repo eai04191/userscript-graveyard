@@ -11,13 +11,13 @@
 
 /*global tinysort*/
 
-(function() {
+(function () {
     "use strict";
 
     const config = {
         childList: true,
     };
-    const observer = new MutationObserver(function() {
+    const observer = new MutationObserver(function () {
         fook();
     });
 

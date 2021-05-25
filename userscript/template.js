@@ -6,7 +6,6 @@
 // @match        https://
 // ==/UserScript==
 
-(function() {
+(function () {
     "use strict";
-
 })();

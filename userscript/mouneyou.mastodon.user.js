@@ -12,7 +12,7 @@
 /*global axios*/
 /*global GM_getValue*/
 
-(function() {
+(function () {
     "use strict";
 
     const mastodon = {
@@ -39,13 +39,13 @@
     function share() {
         changeShareButtonStyle("progress");
         uploadImage(getShareStatus().imageUrl)
-            .then(data => {
+            .then((data) => {
                 postWithImage(getShareStatus().text, data.id);
             })
             .then(() => {
                 changeShareButtonStyle("success");
             })
-            .catch(error => {
+            .catch((error) => {
                 console.error(error);
                 changeShareButtonStyle("error");
             });
@@ -75,19 +75,19 @@
                 responseType: "blob",
                 dataType: "binary",
             })
-            .then(response => {
+            .then((response) => {
                 const blob = new Blob([response.data], { type: "image/png" });
                 const formData = new FormData();
                 formData.append("file", blob, "image.png");
                 return formData;
             })
-            .then(formData => {
+            .then((formData) => {
                 return mastodonClient.post("/media", formData);
             })
-            .then(response => {
+            .then((response) => {
                 return response.data;
             })
-            .catch(error => {
+            .catch((error) => {
                 console.error(error);
             });
     }

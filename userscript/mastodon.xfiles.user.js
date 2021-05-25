@@ -15,10 +15,12 @@
 
 window.addEventListener(
     "load",
-    function() {
+    function () {
         class Xfiles {
             constructor() {
-                this.mutationObserver = new MutationObserver(mutations => this.onUpdate(mutations));
+                this.mutationObserver = new MutationObserver((mutations) =>
+                    this.onUpdate(mutations)
+                );
             }
 
             start() {
@@ -40,7 +42,7 @@ window.addEventListener(
                     var text = node.textContent;
 
                     // 全角英数変換
-                    text = text.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {
+                    text = text.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function (s) {
                         return String.fromCharCode(s.charCodeAt(0) - 65248);
                     });
 

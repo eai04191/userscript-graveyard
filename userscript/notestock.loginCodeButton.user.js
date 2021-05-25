@@ -8,7 +8,7 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     "use strict";
 
     const login_code = document.getElementById("code").value;

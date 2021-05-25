@@ -13,7 +13,7 @@
 /*global GM_setValue*/
 /*global GM_getValue*/
 
-(function() {
+(function () {
     "use strict";
 
     const $ = document.querySelector.bind(document);
@@ -30,7 +30,7 @@
         hideBookmark: GM_getValue("hideBookmark", false),
     };
 
-    const observer = new MutationObserver(function() {
+    const observer = new MutationObserver(function () {
         fook();
     });
 
@@ -99,7 +99,7 @@
                         }
 
                         // FIXME: itemの中にある要素それぞれにこの処理が適用されてしまっている？
-                        item.addEventListener("mousemove", ev => {
+                        item.addEventListener("mousemove", (ev) => {
                             const rect = ev.target.getBoundingClientRect();
                             const width = rect.width;
                             // const height = rect.height;
@@ -188,8 +188,8 @@
     }
 
     function unsetSizeStyles(nodeList) {
-        nodeList.forEach(item => {
-            item.querySelectorAll("*").forEach(e => {
+        nodeList.forEach((item) => {
+            item.querySelectorAll("*").forEach((e) => {
                 e.style.width = "unset";
                 e.style.height = "unset";
             });

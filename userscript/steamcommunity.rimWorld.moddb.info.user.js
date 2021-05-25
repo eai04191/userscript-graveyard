@@ -10,7 +10,7 @@
 // ==/UserScript==
 /*global GM_fetch*/
 
-(async q => {
+(async (q) => {
     "use strict";
     const dbBaseURL = "https://rimworld.2game.info/detail.php?id=";
     const workshopId = q("#application_root").getAttribute("data-publishedfileid");
@@ -34,15 +34,15 @@
     };
 
     // in DB functions
-    const isDescriptionAvilable = dom => {
+    const isDescriptionAvilable = (dom) => {
         return !!dom.querySelector("#modDesc .desc+small a");
     };
 
-    const isJaTranslationAvailable = dom => {
+    const isJaTranslationAvailable = (dom) => {
         return !!dom.querySelector(".jpUpFilesBox");
     };
 
-    const getCommentCount = dom => {
+    const getCommentCount = (dom) => {
         return dom.querySelector(".comNum")
             ? dom.querySelector(".comNum").textContent.replace("#", "")
             : null;

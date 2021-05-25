@@ -9,7 +9,7 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     "use strict";
 
     function addExternalLink() {
@@ -33,7 +33,7 @@
 
         if (nodes[0]) {
             if (!nodes[0].querySelector(".externalLink")) {
-                nodes.forEach(function(node) {
+                nodes.forEach(function (node) {
                     node.style.display = "flex";
                     const originalUrl = node.parentNode.previousSibling.getAttribute("href");
                     const externalUrl = originalUrl.replace("mode=medium", "mode=manga");
@@ -59,7 +59,7 @@
         childList: true,
         subtree: true,
     };
-    const observer = new MutationObserver(function() {
+    const observer = new MutationObserver(function () {
         observer.disconnect();
         addExternalLink();
         observer.observe(document.body, config);

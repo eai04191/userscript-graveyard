@@ -64,13 +64,13 @@
             --gap: calc(var(--width) - var(--collapsed-width));
             > header,
             .container:first-of-type {
-                margin-left: calc(var(--gap) * -1);
-                padding-left: var(--gap) !important;
-                max-width: calc(100% + var(--gap));
                 width: calc(100% + var(--gap));
+                max-width: calc(100% + var(--gap));
+                padding-left: var(--gap) !important;
+                margin-left: calc(var(--gap) * -1);
                 & + hr {
-                    margin-left: calc(var(--gap) * -1);
                     max-width: calc(100% + var(--gap));
+                    margin-left: calc(var(--gap) * -1);
                 }
             }
         }
