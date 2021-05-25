@@ -15,10 +15,12 @@
 
 window.addEventListener(
     "load",
-    function() {
+    function () {
         class BigBen {
             constructor() {
-                this.mutationObserver = new MutationObserver(mutations => this.onUpdate(mutations));
+                this.mutationObserver = new MutationObserver((mutations) =>
+                    this.onUpdate(mutations)
+                );
             }
 
             start() {

@@ -10,7 +10,7 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     "use strict";
 
     function addHonto() {
@@ -58,7 +58,7 @@
         childList: true,
         subtree: true,
     };
-    const observer = new MutationObserver(function() {
+    const observer = new MutationObserver(function () {
         observer.disconnect();
         addHonto();
         observer.observe(document.body, config);

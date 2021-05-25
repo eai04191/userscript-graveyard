@@ -11,8 +11,8 @@
     /* 右サイドバー */
     aside:first-of-type {
         > section {
-            background: white;
             margin-bottom: 1rem;
+            background: white;
         }
 
         /* フォローボタン */
@@ -28,9 +28,9 @@
             }
 
             > div {
-                margin: unset;
-                padding: 16px;
                 box-sizing: border-box;
+                padding: 16px;
+                margin: unset;
             }
 
             /* ヘッダーがないときのタイトルの入ってるdiv */
@@ -54,13 +54,13 @@
                 flex-direction: row;
                 align-items: center;
                 &::before {
-                    content: '';
                     display: inline-block;
                     width: 1em;
                     height: 1em;
+                    margin-right: 4px;
+                    content: '';
                     background: center / contain no-repeat url("https://s.pximg.net/common/images/fanbox/favicon.ico");
                     border-radius: 2px;
-                    margin-right: 4px;
                 }
             }
 
@@ -79,14 +79,14 @@
         a[href*="booth.pm/?"] {
             font-size: 0;
             &::before {
-                content: '';
                 display: inline-block;
-                font-size: 12px;
                 width: 1em;
                 height: 1em;
+                margin-top: 2px;
+                font-size: 12px;
+                content: '';
                 background: center / contain no-repeat url("https://asset.booth.pm/favicon.ico");
-                border-radius: 2px;
-                margin-top: 2px
+                border-radius: 2px
             }
         }
 

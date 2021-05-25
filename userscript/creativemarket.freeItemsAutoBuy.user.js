@@ -9,7 +9,7 @@
 // @run-at       document-idle
 // ==/UserScript==
 
-(function() {
+(function () {
     "use strict";
 
     const isLoggedin = !document.querySelector("#user-menus a[href='/sign-in']");

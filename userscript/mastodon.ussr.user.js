@@ -16,10 +16,12 @@
 
 window.addEventListener(
     "load",
-    function() {
+    function () {
         class USSR {
             constructor() {
-                this.mutationObserver = new MutationObserver(mutations => this.onUpdate(mutations));
+                this.mutationObserver = new MutationObserver((mutations) =>
+                    this.onUpdate(mutations)
+                );
             }
 
             start() {
@@ -44,7 +46,7 @@ window.addEventListener(
                     if (node.textContent.includes(lyric) || node.textContent.includes("☭")) {
                         this.play();
                     } else {
-                        node.querySelectorAll(".status__content img.emojione").forEach(emoji => {
+                        node.querySelectorAll(".status__content img.emojione").forEach((emoji) => {
                             if (emoji.alt === lyric) {
                                 this.play();
                             }

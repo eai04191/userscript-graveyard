@@ -9,7 +9,7 @@
 // ==/UserScript==
 /*global axios*/
 
-(function() {
+(function () {
     "use strict";
 
     const mastodon = {
@@ -45,7 +45,7 @@
     }
 
     function share() {
-        uploadImage(getShareStatus().imageUrl).then(data => {
+        uploadImage(getShareStatus().imageUrl).then((data) => {
             postWithImage(getShareStatus().text, data.id);
         });
     }
@@ -70,19 +70,19 @@
                 responseType: "blob",
                 dataType: "binary",
             })
-            .then(function(response) {
+            .then(function (response) {
                 const blob = new Blob([response.data], { type: "image/png" });
                 const formData = new FormData();
                 formData.append("file", blob, "image.png");
                 return formData;
             })
-            .then(function(formData) {
+            .then(function (formData) {
                 return mastodonClient.post("/media", formData);
             })
-            .then(function(response) {
+            .then(function (response) {
                 return response.data;
             })
-            .catch(function(error) {
+            .catch(function (error) {
                 console.error(error);
             });
     }

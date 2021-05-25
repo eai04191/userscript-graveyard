@@ -8,14 +8,14 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     "use strict";
 
     const hideTags = ["三次元", "3次元"];
 
     document
         .querySelectorAll(".badge[href^='https://shikorism.net/search/checkin?q=']")
-        .forEach(tag => {
+        .forEach((tag) => {
             const text = tag.innerText.trim();
             if (hideTags.includes(text)) {
                 tag.parentElement.parentElement.style.display = "none";

@@ -15,7 +15,7 @@
 /*global GM_download*/
 /*global JSZip*/
 
-(function() {
+(function () {
     "use strict";
 
     const archviedFlag = "archived";
@@ -75,10 +75,7 @@
             ? post.querySelector(".post-content-title").innerText
             : el.closest(".post-content-body").previousElementSibling.innerText;
         const postId = isBacknumberPage()
-            ? el
-                  .closest(".post-content")
-                  .querySelector("a")
-                  .href.match(/(\d+)/)[0]
+            ? el.closest(".post-content").querySelector("a").href.match(/(\d+)/)[0]
             : document
                   .querySelector('link[rel="canonical"]')
                   .href.match(/https:\/\/fantia\.jp\/posts\/(?<postId>\d+)/u).groups.postId;
@@ -92,7 +89,7 @@
         const gallery = post.querySelector(".type-photo-gallery");
         const thambnails = gallery.querySelectorAll(".image-module img");
         const imageIds = [...thambnails].map(
-            img =>
+            (img) =>
                 img.src.match(
                     /https:\/\/cc\.fantia\.jp\/uploads\/post_content_photo\/file\/(?<imageId>\d+)\//
                 ).groups.imageId
@@ -110,7 +107,7 @@
         const zip = new JSZip();
 
         // 詰める
-        files.forEach(file => {
+        files.forEach((file) => {
             const { filename, blob } = file;
             zip.file(filename, blob, { binary: true });
             console.log(`${filename} added to zip.`);
@@ -146,10 +143,10 @@
     // htmlを取得・パースしてフル画像のURLを取得する
     function getFullImageUrls(postId, imageIds) {
         const fullPageUrls = imageIds.map(
-            imageId => `https://fantia.jp/posts/${postId}/post_content_photo/${imageId}`
+            (imageId) => `https://fantia.jp/posts/${postId}/post_content_photo/${imageId}`
         );
         return Promise.all(
-            fullPageUrls.map(async url => {
+            fullPageUrls.map(async (url) => {
                 const response = await GM_fetch(url);
                 const html = await response.text();
                 const doc = document.createRange().createContextualFragment(html);
@@ -163,13 +160,13 @@
     // 返り値はblobのarray
     function getBlobs(urls) {
         return Promise.all(
-            urls.map(url => {
+            urls.map((url) => {
                 return new Promise((resolve, reject) => {
                     GM_xmlhttpRequest({
                         url: url,
                         method: "GET",
                         responseType: "blob",
-                        onload: response => {
+                        onload: (response) => {
                             console.log("GM_xmlhttpRequest", response);
                             if (response.status === 200) {
                                 resolve(response.response);

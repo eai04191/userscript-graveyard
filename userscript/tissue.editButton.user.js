@@ -9,14 +9,14 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     "use strict";
     const mypage = document.querySelector(`[href^='${location.origin}/user/']`).href;
     document
         .querySelectorAll(
             `.list-group-item [href='${mypage}'] img, .container-fluid [href='${mypage}'] img`
         )
-        .forEach(element => {
+        .forEach((element) => {
             const checkin = element.closest(".list-group-item, div.text-break");
             const actions = checkin.querySelector(".ejaculation-actions");
             const editUrl =

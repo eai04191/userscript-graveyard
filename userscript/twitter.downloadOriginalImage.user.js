@@ -11,7 +11,7 @@
 /*global VM*/
 /*global GM_download*/
 
-(function() {
+(function () {
     "use strict";
 
     VM.registerShortcut("d", () => {
@@ -29,12 +29,12 @@
         const images = getImageList(state);
 
         let urls = [];
-        images.forEach(img => {
+        images.forEach((img) => {
             urls.push(getOriginalURL(img.src));
         });
         console.log(urls);
 
-        urls.forEach(url => {
+        urls.forEach((url) => {
             const o = new URL(url);
 
             const ext = o.searchParams.get("format");

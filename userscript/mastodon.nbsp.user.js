@@ -8,7 +8,7 @@
 
 window.addEventListener(
     "load",
-    function() {
+    function () {
         addNBSPButton();
         document.getElementById("nbspConvert").onclick = eventHandlerNBSP;
 

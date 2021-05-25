@@ -17,6 +17,6 @@ document
     .querySelectorAll(
         ".keyword[href^='/keyword'], .keyword[href^='http://d.hatena.ne.jp/keyword'], .keyword[href^='https://d.hatena.ne.jp/keyword']"
     )
-    .forEach(link => {
+    .forEach((link) => {
         link.replaceWith(document.createTextNode(link.innerText));
     });
