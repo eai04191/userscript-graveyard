@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>userscript-graveyard</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="description" content="Description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- prettier-ignore -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" />
+        <link rel="stylesheet" href="//unpkg.com/tailwindcss@%5E2/dist/base.css" />
+        <link rel="stylesheet" href="./dist/style/style.css" />
+        <link rel="stylesheet" href="./dist/style/contents.css" />
+        <!-- <link rel="stylesheet" href="./dist/style/code.css" /> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PrismJS/prism-themes@master/themes/prism-coldark-dark.css" />
+        <link rel="stylesheet" href="./docsify/plugins/install-this.css" />
+        <link rel="stylesheet" href="./docsify/plugins/badge.css" />
+        <!-- prettier-ignore -->
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:126px;%22>😩</text></svg>">
+        <style>
+            .github-corner {
+                display: none;
+            }
+        </style>
+        <!-- Theme: Simple (latest v0.x.x) -->
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
+    </head>
+    <body>
+        <div class="app-nav-bg">&nbsp;</div>
+        <div class="app-wrapper">
+            <div id="app"></div>
+        </div>
+        <footer>
+            <div>
+                <span class="title">Userscript Graveyard</span>
+                <div class="buttons">
+                    <a
+                        class="github-button"
+                        href="https://github.com/eai04191/userscript-graveyard"
+                        data-icon="octicon-star"
+                        data-size="large"
+                        data-show-count="true"
+                        aria-label="Star eai04191/userscript-graveyard on GitHub"
+                        >Star</a
+                    >
+                    <a
+                        class="github-button"
+                        href="https://github.com/sponsors/eai04191"
+                        data-icon="octicon-heart"
+                        data-size="large"
+                        aria-label="Sponsor @eai04191 on GitHub"
+                        >Sponsor</a
+                    >
+                </div>
+            </div>
+        </footer>
+
+        <script src="//unpkg.com/@popperjs/core@2"></script>
+        <script src="//unpkg.com/tippy.js@6"></script>
+        <script type="module">
+            import { installThisPlugin } from "./docsify/plugins/install-this.js";
+            import { badgePlugin } from "./docsify/plugins/badge.js";
+            import { tippyPlugin } from "./docsify/plugins/tippy.js";
+            import { footerPlugin } from "./docsify/plugins/footer.js";
+            import { titlePlugin } from "./docsify/plugins/title.js";
+            import { closableSidebarItemPlugin } from "./docsify/plugins/closable-sidebar-item.js";
+
+            window.$docsify = {
+                name: "Userscript Graveyard",
+                repo: "https://github.com/eai04191/userscript-graveyard",
+                loadNavbar: true,
+                loadSidebar: true,
+                auto2top: true,
+                plugins: [
+                    installThisPlugin,
+                    badgePlugin,
+                    tippyPlugin,
+                    footerPlugin,
+                    titlePlugin,
+                    closableSidebarItemPlugin,
+                ],
+                mergeNavbar: false,
+                topMargin: 57,
+                noEmoji: true,
+            };
+        </script>
+        <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+    </body>
+</html>

@@ -4,6 +4,7 @@
 // @license      MIT
 // @version      1.0.0
 // @match        https://
+// @icon         https://
 // ==/UserScript==
 
 (function () {

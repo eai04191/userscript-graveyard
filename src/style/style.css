@@ -1,0 +1,178 @@
+/* utility */
+
+.ug-hidden {
+    @apply hidden;
+}
+
+/* browser style */
+
+::selection {
+    @apply bg-yellow-200 text-gray-800;
+}
+
+/* layout */
+
+body {
+    padding-top: 57px; /* .app-nav-bg height */
+    @apply text-base text-gray-800 font-body;
+}
+
+.app-nav-bg {
+    @apply fixed top-0 inset-x-0;
+    @apply p-4;
+    @apply border-b border-gray-300 border-opacity-50 bg-white bg-opacity-60;
+    @apply backdrop-filter backdrop-blur-md backdrop-saturate-150 z-20;
+}
+
+.app-nav {
+    @apply fixed top-0 inset-x-0;
+    @apply flex justify-between;
+    @apply max-w-6xl mx-auto px-4 z-30;
+
+    > * {
+        @apply flex;
+    }
+
+    a,
+    strong {
+        @apply py-4;
+        &:hover {
+            @apply no-underline;
+        }
+    }
+
+    > ul {
+        @apply flex justify-end space-x-2 py-0;
+        > li {
+            @apply flex relative cursor-pointer;
+            > * {
+                @apply transition-colors;
+                @apply font-normal px-2;
+                @apply border-b-2 border-opacity-0;
+                /* borderがはみ出さないようにborderの分padding-bottomを削る  */
+                padding-bottom: calc(16px - 2px);
+
+                &[href^="#/userscript"] {
+                    &:hover {
+                        @apply border-blue-500 border-opacity-50;
+                    }
+                    &.active {
+                        @apply border-blue-500 border-opacity-100;
+                    }
+                }
+                &[href^="#/userstyle"] {
+                    &:hover {
+                        @apply border-yellow-500 border-opacity-50;
+                    }
+                    &.active {
+                        @apply border-yellow-500 border-opacity-100;
+                    }
+                }
+            }
+            > ul {
+                @apply hidden;
+                @apply flex-col;
+                @apply absolute top-11 right-0 mt-2 p-4 space-y-4;
+                @apply bg-white border border-gray-300;
+                @apply rounded shadow-md;
+                @apply whitespace-nowrap;
+                a {
+                    @apply py-2;
+                    @apply transition-colors;
+                    &:hover {
+                        @apply border-b-2 border-red-500 border-opacity-50;
+                    }
+                }
+            }
+            &:hover {
+                > ul {
+                    @apply flex;
+                }
+            }
+        }
+    }
+}
+
+.app-wrapper {
+    @apply max-w-6xl mx-auto z-10;
+}
+
+main {
+    @apply relative flex;
+
+    > .sidebar-toggle {
+        @apply hidden;
+    }
+
+    > .sidebar {
+        @apply sticky overflow-y-auto mr-8 pl-4 text-sm;
+        top: 57px;
+        width: 300px;
+        height: calc(100vh - 57px);
+
+        .sidebar-nav {
+            @apply relative my-24;
+
+            > ul {
+                @apply space-y-2;
+                strong {
+                    @apply font-normal  select-none flex cursor-pointer items-center pb-2;
+                    &.ug-close::before {
+                        @apply -rotate-90;
+                    }
+                    &::before {
+                        @apply w-4 h-4 bg-no-repeat mr-2;
+                        @apply transform transition-transform;
+                        content: "";
+                        background-image: url("https://s2.svgbox.net/hero-outline.svg?ic=chevron-down&color=gray-500");
+                    }
+                }
+
+                > li > ul > li {
+                    @apply ml-2 border-l border-gray-300 pl-4 py-2;
+                    &.active {
+                        @apply border-yellow-500 font-bold text-gray-900;
+                    }
+                    a {
+                        @apply flex;
+                    }
+                }
+            }
+        }
+
+        .app-name {
+            @apply hidden;
+        }
+    }
+
+    > .content {
+        @apply p-0 flex-1 min-w-0 mt-4 mb-24;
+    }
+}
+
+footer {
+    @apply relative bg-gray-600;
+    > div {
+        @apply max-w-6xl mx-auto py-28 px-4;
+        @apply flex flex-col justify-start space-y-8;
+        > * {
+            @apply transition-all duration-500;
+        }
+        .title {
+            @apply uppercase text-white text-opacity-5 text-6xl leading-none text-left;
+            font-weight: 100;
+        }
+        .buttons {
+            @apply flex items-center justify-start space-x-6;
+            @apply filter grayscale opacity-30;
+        }
+    }
+    &:hover {
+        .title {
+            @apply text-opacity-50 tracking-wider;
+        }
+        .buttons {
+            @apply filter grayscale-0 opacity-100;
+        }
+    }
+}

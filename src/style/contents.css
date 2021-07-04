@@ -1,0 +1,83 @@
+.markdown-section {
+    @apply relative pr-4 space-y-6;
+
+    h1 {
+        @apply text-5xl font-bold leading-tight;
+    }
+
+    h2 {
+        @apply text-3xl font-semibold;
+    }
+
+    h3 {
+        @apply text-2xl font-semibold;
+    }
+
+    h3 {
+        @apply text-xl font-semibold;
+    }
+
+    img,
+    video {
+        @apply border border-gray-200 p-1 rounded-lg;
+    }
+
+    p {
+        @apply text-base;
+    }
+
+    table {
+        @apply border-collapse border;
+        th,
+        td {
+            @apply border p-2;
+        }
+    }
+
+    ul {
+        @apply list-disc pl-6;
+    }
+
+    /* reveal animation */
+    h1 a {
+        @apply bg-no-repeat bg-right;
+        background-image: linear-gradient(rgb(31, 41, 55), rgb(31, 41, 55));
+        animation: 400ms cubic-bezier(0.4, 0, 0.2, 1) reveal forwards;
+        @keyframes reveal {
+            from {
+                background-size: 100% 100%;
+            }
+            to {
+                background-size: 0% 100%;
+            }
+        }
+    }
+
+    /* 外部リンク */
+    a:not([href^="#/"]) {
+        @apply underline;
+    }
+
+    [v-pre] {
+        @apply overflow-x-scroll w-full;
+        @apply p-6 rounded-lg text-sm leading-6 whitespace-pre;
+        hyphens: none;
+        color: #e3eaf2;
+        word-break: normal;
+        word-wrap: normal;
+        tab-size: 4;
+        background: #111b27;
+        word-spacing: normal;
+    }
+
+    blockquote {
+        @apply p-6 rounded-lg bg-gray-100;
+        cite {
+            @apply block text-right;
+        }
+    }
+}
+
+a:hover {
+    @apply underline text-gray-900;
+}
