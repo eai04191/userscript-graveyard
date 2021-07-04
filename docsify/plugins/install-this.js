@@ -11,7 +11,7 @@ export const installThisPlugin = (hook, vm) => {
         }
 
         const url =
-            "https://raw.githubusercontent.com/eai04191/userscript-graveyard/master" +
+            "https://raw.githubusercontent.com/eai04191/userscript-graveyard/master/" +
             file.replace(/\.md$/, fileInfo.ext);
 
         // TODO: depバッジがある場合は警告を出す
