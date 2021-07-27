@@ -1,0 +1,26 @@
+/* ==UserStyle==
+@name           Mastodon | Notification under the drawer
+@namespace      mizle.net
+@version        1.0.0
+@author         Eai
+@license        MIT
+@preprocessor   stylus
+==/UserStyle== */
+@-moz-document regexp("https://.+/web/.+") {
+    div[aria-label="通知"],
+    div[aria-label="Notifications"] {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+
+        width: 300px;
+        height: 50vh;
+
+        padding-top: 0;
+        padding-left: 10px;
+    }
+
+    .drawer {
+        height: 50vh;
+    }
+}
