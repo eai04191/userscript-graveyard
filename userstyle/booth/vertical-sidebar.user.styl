@@ -1,0 +1,78 @@
+/* ==UserStyle==
+@name           Booth  - vertical sidebar
+@namespace      mizle.net
+@version        1.0.0
+@author         Eai
+@license        MIT
+@preprocessor   stylus
+@icon           https://booth.pm/favicon.ico
+==/UserStyle== */
+@-moz-document url-prefix("https://booth.pm/ja/search/"),
+url-prefix("https://booth.pm/ja/browse/") {
+    .l-market-grid {
+        position: relative;
+        flex-direction: column;
+    }
+
+    .market-sidebar {
+        flex-basis: unset;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        max-width: unset;
+        padding: unset !important;
+        padding-bottom: .40625rem!important;
+        background: var(--background-color);
+
+        .js-search-transition-sections {
+            display: flex;
+            column-gap: .5em;
+            align-items: flex-end;
+
+            .market-sidebar-section {
+                display: flex;
+                column-gap: .5em;
+                margin: unset !important;
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    > label {
+                        display: none;
+                    }
+                }
+
+                &:nth-child(2) {
+                    flex-direction: column;
+
+                    > div {
+                        margin: unset !important;
+                        line-height: 1;
+                        > label {
+                            line-height: 1;
+                        }
+                    }
+
+                    .checkbox-label {
+                        line-height: 1;
+                    }
+
+                    .checkbox_label__inner {
+                        max-width: 4em;
+                        overflow: hidden;
+                        height: 20px;
+                        white-space: nowrap
+                    }
+                }
+
+                &:nth-child(3) {
+                    /* height of ui-range-toggle / 2 */
+                    margin-bottom: 12px !important;
+
+                    .ui-range-interface {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
