@@ -1,14 +1,13 @@
 /* ==UserStyle==
-@name           Booth  - vertical sidebar
+@name           Booth - vertical sidebar
 @namespace      mizle.net
-@version        1.0.0
+@version        1.0.1
 @author         Eai
 @license        MIT
 @preprocessor   stylus
-@icon           https://booth.pm/favicon.ico
 ==/UserStyle== */
 @-moz-document url-prefix("https://booth.pm/ja/search/"),
-url-prefix("https://booth.pm/ja/browse/") {
+url-prefix("https://booth.pm/ja/browse/"), url-prefix("https://booth.pm/ja/events/") {
     .l-market-grid {
         position: relative;
         flex-direction: column;
@@ -33,6 +32,12 @@ url-prefix("https://booth.pm/ja/browse/") {
                 display: flex;
                 column-gap: .5em;
                 margin: unset !important;
+                &:nth-child(1) {
+                    > div {
+                max-width: 150px;
+                        
+                    }
+                }
 
                 &:nth-child(2),
                 &:nth-child(3) {
@@ -65,6 +70,7 @@ url-prefix("https://booth.pm/ja/browse/") {
                 }
 
                 &:nth-child(3) {
+                    flex-grow:1;
                     /* height of ui-range-toggle / 2 */
                     margin-bottom: 12px !important;
 
