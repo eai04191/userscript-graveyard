@@ -3,8 +3,12 @@
 // @name:ja-JP         Booth | マシな音楽プレイヤー
 // @namespace          mizle.net
 // @author             Eai <eai@mizle.net>
-// @match              https://booth.pm/../items/*
-// @version            1.0.0
+// @match              https://booth.pm/ja/items/*
+// @match              https://booth.pm/en/items/*
+// @match              https://booth.pm/ko/items/*
+// @match              https://booth.pm/zh-cn/items/*
+// @match              https://booth.pm/zh-tw/items/*
+// @version            1.0.1
 // @description:ja-JP  Boothの使い勝手の悪いデモ音楽プレイヤーを非表示にしてブラウザデフォルトの音楽プレイヤーを表示します
 // @icon               https://booth.pm/favicon.ico
 // @resource           css https://raw.githubusercontent.com/eai04191/userscript-graveyard/master/userscript/booth/still-better-player.css
