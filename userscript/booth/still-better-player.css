@@ -1,0 +1,22 @@
+:root .player {
+    height: auto;
+    overflow: display;
+}
+:root .player .player_status {
+    position: static;
+    margin-bottom: 10px;
+}
+:root .player .player_status .player_visualize {
+    position: static;
+    height: auto;
+}
+:root .player .player_control,
+:root .player .player_status_overall,
+:root .player .player_status_overall_bg {
+    display: none;
+}
+:root .player audio {
+    display: block !important;
+    width: 100%;
+    controls: controls;
+}

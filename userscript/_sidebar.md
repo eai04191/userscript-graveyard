@@ -1,5 +1,7 @@
 -   **読書メーター**
     -   [hontoで検索](userscript/bookmeter/search-in-honto)
+-   **Booth**
+    -   [マシな音楽プレイヤー](userscript/booth/still-better-player)
 -   **Buhitter**
     -   [🚧 Image Viewer](userscript/buhitter/image-viewer)
 -   **Creative Market**
