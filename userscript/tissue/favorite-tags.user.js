@@ -2,7 +2,7 @@
 // @name         Tissue | Favorite Tags
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.1.0
+// @version      1.1.1
 // @match        https://shikorism.net/checkin
 // @match        https://shikorism.net/checkin/*/edit
 // @icon         https://shikorism.net/favicon.ico
@@ -35,7 +35,7 @@ const createTagHtml = (tagText) => {
     const username = document.querySelector(`.dropdown-item`).href.match(/user\/(.+)/)[1];
     return `<a
         class="list-inline-item badge badge-primary tis-tag-input-item favorite-tags"
-        href="https://shikorism.net/search/checkin?q=user%3A${username}+${tagText}"
+        href="https://shikorism.net/search/checkin?q=user:${username}+tag:${tagText}"
     >
         ${tagText}
     </a>`;
