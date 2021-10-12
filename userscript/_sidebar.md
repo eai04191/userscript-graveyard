@@ -43,6 +43,7 @@
 -   **Tissue**
     -   [現在時刻でチェックインしない](userscript/tissue/dont-realtime-checkin)
     -   [編集ボタン](userscript/tissue/edit-button)
+    -   [よく使うタグ](userscript/tissue/favorite-tags)
     -   [非公開チェックイン数推測](userscript/tissue/guess-private-checkin-counts)
     -   [🚧 タグヘルパー](userscript/tissue/tag-helper)
     -   [⚠️ タグミュート](userscript/tissue/tag-mute)
