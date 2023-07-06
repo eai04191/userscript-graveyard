@@ -50,3 +50,5 @@
 -   **Twitter**
     -   [⚠️ Better Arrow](userscript/twitter/better-arrow)
     -   [⚠️ 原寸画像ダウンローダー](userscript/twitter/download-original-image)
+-   **YouTube**
+    -   [with niconicomments](userscript/youtube/with-niconicomments)
