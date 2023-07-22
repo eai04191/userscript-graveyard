@@ -31,7 +31,15 @@ function getDescriptionElement() {
  */
 function getURLsFromDescription(descriptionElement) {
     const urlArrayInDescription = [...descriptionElement.querySelectorAll("a")]
-        .map((node) => new URL(node.href).searchParams.get("q"))
+        .map((node) => {
+            try {
+                const url = new URL(node.href);
+                return url.searchParams.get("q");
+            } catch (error) {
+                console.error(`Error parsing URL: ${node.href}`);
+                return null;
+            }
+        })
         // nullを除外
         .filter((url) => url !== null);
     return urlArrayInDescription;
