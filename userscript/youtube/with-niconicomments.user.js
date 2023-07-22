@@ -2,7 +2,7 @@
 // @name         YouTube | with niconicomments
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.0.0
+// @version      1.0.1
 // @match        https://www.youtube.com/watch
 // @icon         https://www.youtube.com/favicon.ico
 // @grant        GM_registerMenuCommand
@@ -192,5 +192,5 @@ async function main() {
 }
 
 (() => {
-    GM_registerMenuCommand("With NiconicoComments", main);
+    GM_registerMenuCommand("with niconicomments", main);
 })();
