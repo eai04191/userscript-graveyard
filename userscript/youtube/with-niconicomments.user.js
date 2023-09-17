@@ -51,9 +51,13 @@ function getURLsFromDescription(descriptionElement) {
  * @returns string | null
  */
 function findNiconicoUrl(urlArray) {
-    const niconicoURL = urlArray.find((url) => url.includes("www.nicovideo.jp"));
+    const niconicoURL = urlArray.find((url) => url.includes("www.nicovideo.jp") || url.includes("nico.ms"));
     if (!niconicoURL) {
         return null;
+    }
+    const nicoms = niconicoURL.match(/nico\.ms\/((?:sm|nm|so)?\d+)/);
+    if (nicoms){
+        return `https://www.nicovideo.jp/watch/${nicoms[1]}`;
     }
     return niconicoURL;
 }
