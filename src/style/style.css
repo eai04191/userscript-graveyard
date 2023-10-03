@@ -1,13 +1,17 @@
-/* utility */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.ug-hidden {
-    @apply hidden;
+@layer utilities {
+    .ug-hidden {
+        @apply hidden;
+    }
 }
 
-/* browser style */
-
-::selection {
-    @apply bg-yellow-200 text-gray-800;
+@layer base {
+    ::selection {
+        @apply bg-yellow-200 text-gray-800;
+    }
 }
 
 /* layout */
@@ -21,7 +25,7 @@ body {
     @apply fixed top-0 inset-x-0;
     @apply p-4;
     @apply border-b border-gray-300 border-opacity-50 bg-white bg-opacity-60;
-    @apply backdrop-filter backdrop-blur-md backdrop-saturate-150 z-20;
+    @apply backdrop-blur-md backdrop-saturate-150 z-20;
 }
 
 .app-nav {
