@@ -114,7 +114,7 @@
                                 "src",
                                 img
                                     .getAttribute("src")
-                                    .replace(/p(\d+)(_master\d+\....)$/, `p${pagePosition - 1}$2`)
+                                    .replace(/p(\d+)(_master\d+\....)$/, `p${pagePosition - 1}$2`),
                             );
 
                             updatePageStatus(item, pagePosition);
@@ -124,7 +124,7 @@
                         item.addEventListener("mouseleave", () => {
                             img.setAttribute(
                                 "src",
-                                img.getAttribute("src").replace(/p(\d+)(_master\d+\....)$/, `p0$2`)
+                                img.getAttribute("src").replace(/p(\d+)(_master\d+\....)$/, `p0$2`),
                             );
 
                             updatePageStatus(item, 1);

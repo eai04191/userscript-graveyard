@@ -12,17 +12,21 @@
 @var            text      right  "Right" 0
 ==/UserStyle== */
 @-moz-document url-prefix("https://www.youtube.com/watch") {
+
     /* "left: 50%": 位置情報が指定されていないタイプの字幕 */
     .caption-window.ytp-caption-window-bottom[style*='left: 50%'] {
         if top {
             top: top !important;
         }
+
         if bottom {
             bottom: bottom !important;
         }
+
         if left {
             left: left !important;
         }
+
         if right {
             right: right !important;
         }

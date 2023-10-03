@@ -8,6 +8,7 @@
 @preprocessor   stylus
 ==/UserStyle== */
 @-moz-document url-prefix("https://www.pixiv.net/artworks/") {
+
     /* 右サイドバー */
     aside:first-of-type {
         > section {
@@ -23,6 +24,7 @@
         /* fanbox */
         .sc-1u16qqh-7 {
             padding: 0;
+
             p:first-of-type {
                 display: none;
             }
@@ -53,6 +55,7 @@
             > div > div > div > a[href*="fanbox"] > div {
                 flex-direction: row;
                 align-items: center;
+
                 &::before {
                     display: inline-block;
                     width: 1em;
@@ -78,6 +81,7 @@
         /* boothへのリンクタイトル */
         a[href*="booth.pm/?"] {
             font-size: 0;
+
             &::before {
                 display: inline-block;
                 width: 1em;
@@ -92,7 +96,7 @@
 
         /* booth名（非リンク） */
         .alwh9r-2 {
-            margin-top: calc( -1 * (1em + 4px + 1.5px + 2px));
+            margin-top: calc(-1 * (1em + 4px + 1.5px + 2px));
             margin-left: calc(1em + 4px);
             line-height: calc(1em + 4px);
         }
@@ -100,6 +104,7 @@
         /* booth作品 */
         .alwh9r-3 {
             margin-top: 12px;
+
             li:first-of-type {
                 padding-top: unset
             }

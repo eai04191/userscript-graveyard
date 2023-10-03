@@ -62,12 +62,14 @@
 
         .v-main__wrap {
             --gap: calc(var(--width) - var(--collapsed-width));
+
             > header,
             .container:first-of-type {
                 width: calc(100% + var(--gap));
                 max-width: calc(100% + var(--gap));
                 padding-left: var(--gap) !important;
                 margin-left: calc(var(--gap) * -1);
+
                 & + hr {
                     max-width: calc(100% + var(--gap));
                     margin-left: calc(var(--gap) * -1);
@@ -93,6 +95,7 @@
 
             &:hover {
                 width: var(--width) !important;
+
                 .v-subheader,
                 .v-list-item__title,
                 button:last-of-type {

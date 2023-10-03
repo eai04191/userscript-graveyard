@@ -181,8 +181,6 @@ picrew の完成画面で直接投稿できるボタンを追加する。
 
 ![](./spacer.png)
 
-
-
 ### [tissue.tagMute.user.js](/userscript/tissue.tagMute.user.js)
 
 [Tissue](https://shikorism.net/) にタグミュートのようなものを追加するやつ。
@@ -190,7 +188,6 @@ picrew の完成画面で直接投稿できるボタンを追加する。
 使うときは 14 行目の配列を書き換える
 
 使ってるとタグミュートしていることを忘れるので注意。
-
 
 ### [mastodon.bigben.user.js](/userscript/mastodon.bigben.user.js)
 
@@ -258,7 +255,6 @@ Tampermonkey はわからん（ないっぽい）（つまり使えないとい�
 ### [tissue.editButton.user.js](/userscript/tissue.editButton.user.js)
 
 Tissue のお惣菜コーナーで自分のチェックインに編集ボタンを追加する。
-
 
 ### [twitter.betterArrow.user.js](/userscript/twitter.betterArrow.user.js)
 

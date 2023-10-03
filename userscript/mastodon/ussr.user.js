@@ -21,7 +21,7 @@ window.addEventListener(
         class USSR {
             constructor() {
                 this.mutationObserver = new MutationObserver((mutations) =>
-                    this.onUpdate(mutations)
+                    this.onUpdate(mutations),
                 );
             }
 
@@ -33,7 +33,7 @@ window.addEventListener(
                         .querySelector("div.item-list"),
                     {
                         childList: true,
-                    }
+                    },
                 );
             }
 
@@ -65,12 +65,12 @@ window.addEventListener(
                     USSRAnthem,
                     { volume: volume, controls: true },
                     document.querySelector(".drawer__inner"),
-                    document.querySelector(".drawer__inner__mastodon")
+                    document.querySelector(".drawer__inner__mastodon"),
                 );
             }
         }
 
         new USSR().start();
     },
-    false
+    false,
 );

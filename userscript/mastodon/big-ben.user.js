@@ -19,7 +19,7 @@ window.addEventListener(
         class BigBen {
             constructor() {
                 this.mutationObserver = new MutationObserver((mutations) =>
-                    this.onUpdate(mutations)
+                    this.onUpdate(mutations),
                 );
             }
 
@@ -31,7 +31,7 @@ window.addEventListener(
                         .querySelector("div.item-list"),
                     {
                         childList: true,
-                    }
+                    },
                 );
             }
 
@@ -74,12 +74,12 @@ window.addEventListener(
                     source,
                     { volume: volume },
                     document.querySelector(".drawer__inner"),
-                    document.querySelector(".drawer__inner__mastodon")
+                    document.querySelector(".drawer__inner__mastodon"),
                 );
             }
         }
 
         new BigBen().start();
     },
-    false
+    false,
 );

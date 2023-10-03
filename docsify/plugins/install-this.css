@@ -1,18 +1,32 @@
 .install-this {
-  float: right;
-  text-decoration: none !important;
+    float: right;
+    text-decoration: none !important;
 }
-  .install-this:hover {
-    text-decoration: none;
-  }
-  .install-this p {
+.install-this:hover {
+    text-decoration-line: none;
+}
+.install-this p {
     display: flex;
+}
+.install-this p {
     align-items: center;
+}
+.install-this p {
     justify-content: center;
+}
+.install-this p {
     border-radius: 0.25rem;
+}
+.install-this p {
     border-width: 1px;
+}
+.install-this p {
     --tw-border-opacity: 1;
-    border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+    border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+.install-this p {
     margin: 0px;
+}
+.install-this p {
     padding: 0.5rem;
-  }
+}

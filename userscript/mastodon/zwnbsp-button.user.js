@@ -34,5 +34,5 @@ window.addEventListener(
             NBSPConvert();
         }
     },
-    false
+    false,
 );

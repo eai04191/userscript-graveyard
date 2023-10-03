@@ -7,6 +7,7 @@
 @preprocessor   stylus
 ==/UserStyle== */
 @-moz-document url-prefix("https://www.youtube.com/watch?v=") {
+
     /* remove default gap */
     ytd-menu-renderer:not([condensed]) .ytd-menu-renderer[button-renderer] + .ytd-menu-renderer[button-renderer] {
         margin-left: 0px;
@@ -24,7 +25,9 @@
             gap: var(--gap);
         }
 
-        ytd-button-renderer, ytd-toggle-button-renderer, ytd-download-button-renderer {
+        ytd-button-renderer,
+        ytd-toggle-button-renderer,
+        ytd-download-button-renderer {
             > a {
                 padding-right: 0 !important;
             }
@@ -45,4 +48,4 @@
             }
         }
     }
-} // www.youtube.com/watch?v=") {
+}

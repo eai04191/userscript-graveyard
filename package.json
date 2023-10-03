@@ -15,7 +15,7 @@
         "lint": "run-s lint:*",
         "lint:eslint": "eslint userscript/**/*.js --fix",
         "lint:jsBeautify": "js-beautify userstyle/**/*.styl --replace --type css",
-        "lint:prettier": "prettier --write userscript",
+        "lint:prettier": "prettier --write .",
         "watch": "run-p watch:*",
         "watch:style": "tailwindcss -i ./src/style/style.css -o ./dist/style/style.css --postcss --watch",
         "watch:content": "tailwindcss -i ./src/style/contents.css -o ./dist/style/contents.css --postcss --watch",

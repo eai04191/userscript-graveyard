@@ -20,6 +20,6 @@
     const button = document.getElementById("btn_next");
     button.insertAdjacentHTML(
         "beforeBegin",
-        `<a href="https://${login_instance}/share?text=${login_code}" class="btn btn-secondary" target="_blank">投稿する</a>`
+        `<a href="https://${login_instance}/share?text=${login_code}" class="btn btn-secondary" target="_blank">投稿する</a>`,
     );
 })();

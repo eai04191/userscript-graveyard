@@ -18,6 +18,6 @@ GM_registerMenuCommand("合計額を計算する", () => {
             [...document.querySelectorAll("span")]
                 .filter((span) => span.innerText.startsWith("¥"))
                 .reduce((a, x) => (a += parseInt(x.innerText.replace("¥", ""))), 0) +
-            "/月"
+            "/月",
     );
 });

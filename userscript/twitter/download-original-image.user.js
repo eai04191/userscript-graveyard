@@ -68,7 +68,7 @@
         if (state === "TWEET_DETAILED") {
             const id = document.location.href.match(/status\/(?<id>\d+)/).groups.id;
             return document.querySelectorAll(
-                `article a[href*='${id}'] img[src^='https://pbs.twimg.com/media']`
+                `article a[href*='${id}'] img[src^='https://pbs.twimg.com/media']`,
             );
         }
     }

@@ -13,7 +13,8 @@
     padding-bottom: unset;
 }
 
-.script.disabled, .script.removed {
+.script.disabled,
+.script.removed {
     background: unset;
 }
 

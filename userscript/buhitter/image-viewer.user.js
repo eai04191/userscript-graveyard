@@ -22,8 +22,8 @@ GM_addStyle(GM_getResourceText("photoswipe_style"));
 GM_addStyle(
     GM_getResourceText("photoswipe_skin_style").replace(
         /url\(/gm,
-        "url(https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/"
-    )
+        "url(https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/",
+    ),
 );
 GM_addStyle(`
     /* https://gist.github.com/Grawl/e67aeffbe5e3c09c5ca1acc95765df61#file-previews-sass */

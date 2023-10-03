@@ -15,7 +15,7 @@
     const mypage = document.querySelector(`[href^='${location.origin}/user/']`).href;
     document
         .querySelectorAll(
-            `.list-group-item [href='${mypage}'] img, .container-fluid [href='${mypage}'] img`
+            `.list-group-item [href='${mypage}'] img, .container-fluid [href='${mypage}'] img`,
         )
         .forEach((element) => {
             const checkin = element.closest(".list-group-item, div.text-break");

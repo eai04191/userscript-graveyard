@@ -33,7 +33,7 @@
         // https://stackoverflow.com/questions/23892547/what-is-the-best-way-to-trigger-onchange-event-in-react-js#46012210
         const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
             window.HTMLInputElement.prototype,
-            "value"
+            "value",
         ).set;
         nativeInputValueSetter.call(input, tag);
 
@@ -165,6 +165,6 @@
             });
             console.log(tags, "hooked!");
         })(),
-        1 * 1000
+        1 * 1000,
     );
 })();

@@ -17,7 +17,7 @@ const dispatchTag = (tag) => {
     // https://stackoverflow.com/questions/23892547/what-is-the-best-way-to-trigger-onchange-event-in-react-js#46012210
     const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
         window.HTMLInputElement.prototype,
-        "value"
+        "value",
     ).set;
     nativeInputValueSetter.call(input, tag);
 
@@ -50,7 +50,7 @@ const addTagEvent = (tagElement) => {
 
 (async () => {
     const favoriteTagsSet = await fetch(
-        `${document.querySelector(".dropdown-item[href$='/stats']").href}`
+        `${document.querySelector(".dropdown-item[href$='/stats']").href}`,
     )
         .then((res) => res.text())
         .then((html) => {
@@ -63,7 +63,7 @@ const addTagEvent = (tagElement) => {
         });
 
     const recentTagsSet = await fetch(
-        `${document.querySelector(".dropdown-item[href$='/okazu']").href}`
+        `${document.querySelector(".dropdown-item[href$='/okazu']").href}`,
     )
         .then((res) => res.text())
         .then((html) => {
@@ -82,7 +82,7 @@ const addTagEvent = (tagElement) => {
     const favoriteTags = document.createElement("div");
     favoriteTags.insertAdjacentHTML(
         "afterbegin",
-        `<small class="form-text text-muted">よく使うタグ: </small>`
+        `<small class="form-text text-muted">よく使うタグ: </small>`,
     );
     favoriteTagsSet.forEach((tagText) => {
         const template = document.createElement("template");
@@ -97,7 +97,7 @@ const addTagEvent = (tagElement) => {
     const recentTags = document.createElement("div");
     recentTags.insertAdjacentHTML(
         "afterbegin",
-        `<small class="form-text text-muted">最近使ったタグ: </small>`
+        `<small class="form-text text-muted">最近使ったタグ: </small>`,
     );
     recentTagsSet.forEach((tagText) => {
         const template = document.createElement("template");

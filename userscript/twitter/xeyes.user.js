@@ -74,11 +74,11 @@
             const dist = Math.sqrt(dx * dx + dy * dy);
             const moveDistX = Math.min(
                 dist / 10,
-                eye.clientWidth / 2 - eye.firstElementChild.clientWidth / 2
+                eye.clientWidth / 2 - eye.firstElementChild.clientWidth / 2,
             );
             const moveDistY = Math.min(
                 dist / 10,
-                eye.clientHeight / 2 - eye.firstElementChild.clientHeight / 2
+                eye.clientHeight / 2 - eye.firstElementChild.clientHeight / 2,
             );
             const pupilX = moveDistX * Math.cos(rad);
             const pupilY = moveDistY * Math.sin(rad);

@@ -24,7 +24,7 @@
             document,
             null,
             XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-            null
+            null,
         );
 
         const nodes = [];

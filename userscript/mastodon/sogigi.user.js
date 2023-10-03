@@ -16,7 +16,7 @@ window.addEventListener(
 
         function sogigi() {
             const cwButton = document.querySelector(
-                'button[aria-controls="cw-spoiler-input"][aria-expanded="false"]'
+                'button[aria-controls="cw-spoiler-input"][aria-expanded="false"]',
             );
             const cwInput = document.querySelector("#cw-spoiler-input");
             if (!cwButton) {
@@ -34,14 +34,14 @@ window.addEventListener(
                 new Event("click", {
                     bubbles: true,
                     cancelable: true,
-                })
+                }),
             );
             setNativeValue(cwInput, "そぎぎ");
             cwInput.dispatchEvent(
                 new Event("input", {
                     bubbles: true,
                     cancelable: false,
-                })
+                }),
             );
             return true;
         }
@@ -74,5 +74,5 @@ window.addEventListener(
             }
         }
     },
-    false
+    false,
 );

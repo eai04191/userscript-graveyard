@@ -51,12 +51,14 @@ function getURLsFromDescription(descriptionElement) {
  * @returns string | null
  */
 function findNiconicoUrl(urlArray) {
-    const niconicoURL = urlArray.find((url) => url.includes("www.nicovideo.jp") || url.includes("nico.ms"));
+    const niconicoURL = urlArray.find(
+        (url) => url.includes("www.nicovideo.jp") || url.includes("nico.ms"),
+    );
     if (!niconicoURL) {
         return null;
     }
     const nicoms = niconicoURL.match(/nico\.ms\/((?:sm|nm|so)?\d+)/);
-    if (nicoms){
+    if (nicoms) {
         return `https://www.nicovideo.jp/watch/${nicoms[1]}`;
     }
     return niconicoURL;
@@ -135,7 +137,7 @@ function getNiconicoURL() {
 
     const input = prompt(
         "概要欄にニコニコ動画のURLが見つかりませんでした。手動で入力するかキャンセルしてください。",
-        ""
+        "",
     );
 
     if (!input) {
@@ -179,7 +181,7 @@ async function main() {
     const niconiComments = new NiconiComments(commentCanvas, comments);
     const intervalId = setInterval(
         () => niconiComments.drawCanvas(Math.floor(video.currentTime * 100)),
-        10
+        10,
     );
 
     // タイトルが変わったら色々初期化する

@@ -91,8 +91,8 @@
         const imageIds = [...thambnails].map(
             (img) =>
                 img.src.match(
-                    /https:\/\/cc\.fantia\.jp\/uploads\/post_content_photo\/file\/(?<imageId>\d+)\//
-                ).groups.imageId
+                    /https:\/\/cc\.fantia\.jp\/uploads\/post_content_photo\/file\/(?<imageId>\d+)\//,
+                ).groups.imageId,
         );
         const fullImageUrls = await getFullImageUrls(postId, imageIds);
         const filenames = fullImageUrls.map((url, i) => {
@@ -143,7 +143,7 @@
     // htmlを取得・パースしてフル画像のURLを取得する
     function getFullImageUrls(postId, imageIds) {
         const fullPageUrls = imageIds.map(
-            (imageId) => `https://fantia.jp/posts/${postId}/post_content_photo/${imageId}`
+            (imageId) => `https://fantia.jp/posts/${postId}/post_content_photo/${imageId}`,
         );
         return Promise.all(
             fullPageUrls.map(async (url) => {
@@ -152,7 +152,7 @@
                 const doc = document.createRange().createContextualFragment(html);
                 const src = doc.querySelector("img").src;
                 return src;
-            })
+            }),
         );
     }
 
@@ -176,7 +176,7 @@
                         },
                     });
                 });
-            })
+            }),
         );
     }
 

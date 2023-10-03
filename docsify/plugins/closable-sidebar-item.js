@@ -8,8 +8,8 @@ export const closableSidebarItemPlugin = (hook) => {
                     item.classList.toggle("ug-close");
                     item.nextSibling.classList.toggle("ug-hidden");
                 },
-                false
-            )
+                false,
+            ),
         );
     });
 };

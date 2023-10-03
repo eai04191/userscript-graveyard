@@ -16,7 +16,7 @@
             class discordImagemate {
                 constructor() {
                     this.mutationObserver = new MutationObserver((mutations) =>
-                        this.onUpdate(mutations)
+                        this.onUpdate(mutations),
                     );
                 }
 
@@ -31,7 +31,7 @@
                 onUpdate(mutations) {
                     console.log("mutation found: ", mutations);
                     const imageNodelist = document.querySelectorAll(
-                        "a[class*='imageWrapper-'][href$='.png'], a[class*='imageWrapper-'][href$='.jpg']"
+                        "a[class*='imageWrapper-'][href$='.png'], a[class*='imageWrapper-'][href$='.jpg']",
                     );
                     if (imageNodelist != 0) {
                         imageNodelist.forEach((a) => {
@@ -55,6 +55,6 @@
 
             new discordImagemate().start();
         },
-        false
+        false,
     );
 })();

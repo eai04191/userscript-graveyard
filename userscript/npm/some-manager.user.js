@@ -108,7 +108,7 @@
     const yarnButton = document
         .createRange()
         .createContextualFragment(
-            `<button class="npmsm_button"><img src="https://s2.svgbox.net/files.svg?ic=yarn"></button>`
+            `<button class="npmsm_button"><img src="https://s2.svgbox.net/files.svg?ic=yarn"></button>`,
         );
     yarnButton.querySelector("button").addEventListener("click", () => {
         copy(createCommandWithTypes(packageName, "yarn", false, hasDT));
@@ -118,7 +118,7 @@
     const yarnDevButton = document
         .createRange()
         .createContextualFragment(
-            `<button class="npmsm_button"><img src="https://s2.svgbox.net/files.svg?ic=yarn"><img src="https://s2.svgbox.net/hero-solid.svg?ic=cog&color=0088b6"></button>`
+            `<button class="npmsm_button"><img src="https://s2.svgbox.net/files.svg?ic=yarn"><img src="https://s2.svgbox.net/hero-solid.svg?ic=cog&color=0088b6"></button>`,
         );
     yarnDevButton.querySelector("button").addEventListener("click", () => {
         copy(createCommandWithTypes(packageName, "yarn", true, hasDT));
@@ -128,7 +128,7 @@
     const pnpmButton = document
         .createRange()
         .createContextualFragment(
-            `<button class="npmsm_button"><img src="https://s2.svgbox.net/files.svg?ic=light-pnpm"></button>`
+            `<button class="npmsm_button"><img src="https://s2.svgbox.net/files.svg?ic=light-pnpm"></button>`,
         );
     pnpmButton.querySelector("button").addEventListener("click", () => {
         copy(createCommandWithTypes(packageName, "pnpm", false, hasDT));
@@ -138,7 +138,7 @@
     const pnpmDevButton = document
         .createRange()
         .createContextualFragment(
-            `<button class="npmsm_button"><img src="https://s2.svgbox.net/files.svg?ic=light-pnpm"><img src="https://s2.svgbox.net/hero-solid.svg?ic=cog&color=f9ad00"></button>`
+            `<button class="npmsm_button"><img src="https://s2.svgbox.net/files.svg?ic=light-pnpm"><img src="https://s2.svgbox.net/hero-solid.svg?ic=cog&color=f9ad00"></button>`,
         );
     pnpmDevButton.querySelector("button").addEventListener("click", () => {
         copy(createCommandWithTypes(packageName, "pnpm", true, hasDT));
