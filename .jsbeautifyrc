@@ -1,0 +1,6 @@
+{
+    "end_with_newline": true,
+    "css": {
+        "space_around_combinator": true
+    }
+}

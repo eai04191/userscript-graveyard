@@ -1,16 +1,19 @@
 {
-    "parser": "babel-eslint",
     "env": {
         "browser": true,
-        "es6": true
+        "es2021": true
     },
     "extends": ["eslint:recommended", "prettier"],
-    "plugins": ["prettier"],
-    "parserOptions": {
-        "ecmaVersion": 2017
-    },
     "rules": {
-        "prettier/prettier": "error",
-        "no-console": "off"
-    }
+        "no-console": "off",
+        "no-unused-vars": "off"
+    },
+    "overrides": [
+        {
+            "files": ["*.config.js"],
+            "env": {
+                "node": true
+            }
+        }
+    ]
 }
