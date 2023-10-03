@@ -17,7 +17,7 @@
         @apply text-xl font-semibold;
     }
 
-    img,
+    img:not([src^='https://forthebadge.com/']),
     video {
         @apply border border-gray-200 p-1 rounded-lg;
     }
