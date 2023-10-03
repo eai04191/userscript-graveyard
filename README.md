@@ -20,12 +20,4 @@ PR はおそらく受け入れます。
 
 ## Contributors
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://mizle.net"><img src="https://avatars1.githubusercontent.com/u/3516343?v=4" width="100px;" alt="Aoi Irie"/><br /><sub><b>Aoi Irie</b></sub></a><br /><a href="https://github.com/eai04191/userscript-graveyard/commits?author=eai04191" title="Code">💻</a> <a href="https://github.com/eai04191/userscript-graveyard/commits?author=eai04191" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/mohemohe"><img src="https://avatars3.githubusercontent.com/u/5028163?v=4" width="100px;" alt="mohemohe"/><br /><sub><b>mohemohe</b></sub></a><br /><a href="https://github.com/eai04191/userscript-graveyard/commits?author=mohemohe" title="Code">💻</a></td></tr></table>
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+[![Contributors](https://contrib.nn.ci/api?repo=eai04191/userscript-graveyard)](https://github.com/eai04191/userscript-graveyard/graphs/contributors)
