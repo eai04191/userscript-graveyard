@@ -2,7 +2,7 @@
 
 {{Deprecated}}
 
-![](https://i.imgur.com/prQn59z.png)
+![](./archive-downloader-1.png)
 
 Fantiaの画像ギャラリー投稿に「zipにまとめてダウンロード」ボタンを追加する。
 

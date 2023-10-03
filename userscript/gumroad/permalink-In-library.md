@@ -1,6 +1,6 @@
 # Permalink in Library
 
-![](https://i.imgur.com/q0kXj9Z.png)
+![](./permalink-In-library-1.png)
 
 Gumroadのライブラリにパーマリンクのアイコンを追加する。
 

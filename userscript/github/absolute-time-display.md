@@ -2,6 +2,6 @@
 
 {{Deprecated}}
 
-![](https://i.imgur.com/03UYIUT.png)
+![](./absolute-time-display-1.png)
 
 GitHubの時間表記`on 30 Jul 2018`みたいなのを`2018/7/30 22:41`といった表記に変更するやつだけど、多分壊れてるからやめておいたほうがいいと思う。
