@@ -16,6 +16,8 @@
     -   [Permalink in Library](userscript/gumroad/permalink-In-library)
 -   **はてな**
     -   [はてなキーワード消すやつ](userscript/hatena/remove-hatena-keyword)
+-   **Iwara**
+    -   [aria2でダウンロードするやつ](userscript/iwara/download-helper)
 -   **Mastodon**
     -   [BigBen](userscript/mastodon/big-ben)
     -   [そぎぎボタン](userscript/mastodon/sogigi)
