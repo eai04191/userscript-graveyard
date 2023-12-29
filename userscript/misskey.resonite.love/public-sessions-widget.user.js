@@ -5,7 +5,7 @@
 // @license     MIT
 // @match       https://misskey.resonite.love/*
 // @grant       none
-// @version     1.0.1
+// @version     1.0.2
 // @description カレンダーウィジェットをPublic Sessionsに置き換える
 // ==/UserScript==
 
@@ -32,6 +32,7 @@
  *
  * @property {string} username
  * @property {string} userID
+ * @property {boolen} isPresent
  */
 
 /**
@@ -93,9 +94,17 @@ function createHtmlBody(sessions) {
             const linkStyle = `flex: 1;`;
             const linkTitle = session.sessionUsers
                 .map((user) => {
+                    const emoji = [];
                     const isHeadless =
                         session.headlessHost && user.username === session.hostUsername;
-                    return isHeadless ? `🤖 ${user.username}` : user.username;
+                    if (isHeadless) {
+                        emoji.push("🤖");
+                    }
+                    // headlessの場合zzzなのは自明なので表示しない
+                    if (!isHeadless && !user.isPresent) {
+                        emoji.push("💤");
+                    }
+                    return (emoji.join("") + " " + user.username).trim();
                 })
                 .join("\n");
             const link = `<a href="${linkHref}" target="_blank" style="${linkStyle}" title="${linkTitle}">
