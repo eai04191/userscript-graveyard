@@ -83,8 +83,8 @@
         const state = imageModalRegEx.test(l)
             ? "IMAGE_MODAL"
             : tweetDetailedRegEx.test(l)
-            ? "TWEET_DETAILED"
-            : "TIMELINE";
+              ? "TWEET_DETAILED"
+              : "TIMELINE";
 
         return state;
     }
