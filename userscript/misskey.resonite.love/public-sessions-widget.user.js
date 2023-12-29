@@ -5,7 +5,7 @@
 // @license     MIT
 // @match       https://misskey.resonite.love/*
 // @grant       none
-// @version     1.0.0
+// @version     1.0.1
 // @description カレンダーウィジェットをPublic Sessionsに置き換える
 // ==/UserScript==
 
@@ -21,6 +21,7 @@
  * @property {boolean} headlessHost
  * @property {string} hostUsername
  * @property {string} name
+ * @property {number} activeUsers
  * @property {number} joinedUsers
  * @property {number} maxUsers
  * @property {SessionUser[]} sessionUsers
@@ -45,7 +46,7 @@ async function fetchSessions() {
         ...session,
         name: session.name || "(Unnamed session)",
     }));
-    sessions.sort((a, b) => b.joinedUsers - a.joinedUsers);
+    sessions.sort((a, b) => b.activeUsers - a.activeUsers);
 
     return sessions;
 }
@@ -60,14 +61,14 @@ function sanitizeText(text) {
 }
 
 function createHtmlHeader(sessions) {
-    const totalJoinedUsers = sessions.reduce((acc, session) => acc + session.joinedUsers, 0);
+    const totalActiveUsers = sessions.reduce((acc, session) => acc + session.activeUsers, 0);
 
     return `
     <header class="xeHoU">
         <div class="xyAgf">
             <span class="xzZPu"><i class="ti ti-apps"></i></span>
             <a href="https://resonite-explorer.eai.sh/sessions" target="_blank">
-            Public Sessions (${totalJoinedUsers} users)
+            Public Sessions (${totalActiveUsers} users)
             </a>
         </div>
         <div class="xx67a">
@@ -103,7 +104,7 @@ function createHtmlBody(sessions) {
 
             const userStatusStyle = `flex-shrink: 0; opacity: 0.8; font-family: monospace;`;
             const userStatusMaxUsersText = session.maxUsers.toString().padStart(2, " ");
-            const userStatus = `<span style="${userStatusStyle}">${session.joinedUsers}&thinsp;/&thinsp;${userStatusMaxUsersText}</span>`;
+            const userStatus = `<span style="${userStatusStyle}">${session.activeUsers}&thinsp;/&thinsp;${userStatusMaxUsersText}</span>`;
 
             const sessionStyle = `display: flex; align-items: center; gap: 0.25rem;`;
 
