@@ -5,7 +5,7 @@
 // @license     MIT
 // @match       https://misskey.resonite.love/*
 // @grant       none
-// @version     1.0.2
+// @version     1.0.3
 // @description カレンダーウィジェットをPublic Sessionsに置き換える
 // ==/UserScript==
 
@@ -87,7 +87,7 @@ function createHtmlBody(sessions) {
         .map((session) => {
             const thumbnailHref = session.thumbnailUrl || "#";
             const thumbnailTarget = session.thumbnailUrl ? "_blank" : "";
-            const thumbnailStyle = `width: 1.7em; height: 1.7em; border-radius: 6px; background: no-repeat center/cover url('${session.thumbnailUrl}') rgb(0 0 0 / 20%)`;
+            const thumbnailStyle = `flex-shrink: 0; width: 1.7em; height: 1.7em; border-radius: 6px; background: no-repeat center/cover url('${session.thumbnailUrl}') rgb(0 0 0 / 20%);`;
             const thumbnail = `<a href="${thumbnailHref}" target="${thumbnailTarget}" style="${thumbnailStyle}"></a>`;
 
             const linkHref = `https://api.resonite.com/sessions/${session.sessionId}`;
